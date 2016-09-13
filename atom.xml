@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2016-09-13T07:37:24.521Z</updated>
+  <updated>2016-09-13T08:43:35.033Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>jQuery操作dom元素</title>
-    <link href="https://feahter.github.io/2016/09/07/jquery%E6%93%8D%E4%BD%9Cdom%E5%85%83%E7%B4%A0/"/>
-    <id>https://feahter.github.io/2016/09/07/jquery操作dom元素/</id>
-    <published>2016-09-07T02:45:42.204Z</published>
-    <updated>2016-09-13T07:37:24.521Z</updated>
+    <link href="https://feahter.github.io/2016/09/13/jQuery%E6%93%8D%E4%BD%9Cdom%E5%85%83%E7%B4%A0/"/>
+    <id>https://feahter.github.io/2016/09/13/jQuery操作dom元素/</id>
+    <published>2016-09-13T08:43:07.000Z</published>
+    <updated>2016-09-13T08:43:35.033Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp</a></p>
 <table>
@@ -644,10 +644,10 @@
   
   <entry>
     <title>jQuery 的选择器</title>
-    <link href="https://feahter.github.io/2016/09/07/jQuery%20%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    <id>https://feahter.github.io/2016/09/07/jQuery 的选择器/</id>
-    <published>2016-09-07T02:38:32.526Z</published>
-    <updated>2016-09-13T07:37:25.737Z</updated>
+    <link href="https://feahter.github.io/2016/09/13/jQuery%20%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    <id>https://feahter.github.io/2016/09/13/jQuery 的选择器/</id>
+    <published>2016-09-13T07:42:13.000Z</published>
+    <updated>2016-09-13T07:44:48.542Z</updated>
     
     <content type="html"><![CDATA[<p>jQuery 的选择器可谓之强大无比，这里简单地总结一下常用的元素查找方法 </p>
 <p>$(“#myELement”)    选择id值等于myElement的元素，id值不能重复在文档中只能有一个id值是myElement所以得到的是唯一的元素<br>$(“div”)           选择所有的div标签元素，返回div元素数组<br>$(“.myClass”)      选择使用myClass类的css的所有元素<br>$(“*”)             选择文档中的所有的元素，可以运用多种的选择方式进行联合选择：例如$(“#myELement,div,.myclass”) </p>
