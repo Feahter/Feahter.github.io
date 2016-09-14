@@ -8,8 +8,7 @@
       <url>https://feahter.github.io/2016/09/13/ST3%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6/</url>
       <content type="html"><![CDATA[<p><strong>ST3的私人订制。</strong></p>
 <h2 id="一、官网下载安装"><a href="#一、官网下载安装" class="headerlink" title="一、官网下载安装"></a>一、官网下载安装</h2><p><strong>1.</strong><a href="http://www.sublimetext.com/3" target="_blank" rel="external"><strong>官网</strong></a><strong>下载。</strong></p>
-<p> <img src="../images/st3download.png" alt="st3download"></p>
-<p><strong>2.软件安装。</strong></p>
+<p><strong>2.软件安装。</strong><br><a id="more"></a></p>
 <h2 id="二、正版激活"><a href="#二、正版激活" class="headerlink" title="二、正版激活"></a>二、正版激活</h2><p><strong>Sublime Text 3 许可证</strong></p>
 <p><em>—– BEGIN LICENSE —–</em><br><em>Nicolas Hennion</em><br><em>Single User License</em><br><em>EA7E-866075</em><br><em>8A01AA83 1D668D24 4484AEBC 3B04512C</em><br><em>827B0DE5 69E9B07A A39ACCC0 F95F5410</em><br><em>729D5639 4C37CECB B2522FB3 8D37FDC1</em><br><em>72899363 BBA441AC A5F47F08 6CD3B3FE</em><br><em>CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D</em><br><em>0CC513E7 52FF2333 9F726D2C CDE53B4A</em><br><em>810C0D4F E1F419A3 CDA0832B 8440565A</em><br><em>35BF00F6 4CA9F869 ED10E245 469C233E</em><br><em>—— END LICENSE ——</em></p>
 <p><strong>1.打开Sublime菜单 &gt; help &gt; enter License</strong></p>
@@ -151,122 +150,7 @@
     <entry>
       <title><![CDATA[jQuery操作dom元素]]></title>
       <url>https://feahter.github.io/2016/09/13/jQuery%E6%93%8D%E4%BD%9Cdom%E5%85%83%E7%B4%A0/</url>
-      <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp</a></p>
-<table>
-<thead>
-<tr>
-<th><a href="http://www.w3school.com.cn/jquery/attributes_addclass.asp" target="_blank" rel="external">addClass()</a></th>
-<th>向匹配的元素添加指定的类名。</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_after.asp" target="_blank" rel="external">after()</a></td>
-<td>在匹配的元素之后插入内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_append.asp" target="_blank" rel="external">append()</a></td>
-<td>向匹配的元素内部追加内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_appendto.asp" target="_blank" rel="external">appendTo()</a></td>
-<td>向匹配的元素内部追加内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_attr.asp" target="_blank" rel="external">attr()</a></td>
-<td>设置或返回匹配元素的属性和值。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_before.asp" target="_blank" rel="external">before()</a></td>
-<td>在每个匹配的元素之前插入内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_clone.asp" target="_blank" rel="external">clone()</a></td>
-<td>创建匹配元素集合的副本。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_detach.asp" target="_blank" rel="external">detach()</a></td>
-<td>从 DOM 中移除匹配元素集合。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_empty.asp" target="_blank" rel="external">empty()</a></td>
-<td>删除匹配的元素集合中所有的子节点。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_hasclass.asp" target="_blank" rel="external">hasClass()</a></td>
-<td>检查匹配的元素是否拥有指定的类。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_html.asp" target="_blank" rel="external">html()</a></td>
-<td>设置或返回匹配的元素集合中的 HTML 内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_insertafter.asp" target="_blank" rel="external">insertAfter()</a></td>
-<td>把匹配的元素插入到另一个指定的元素集合的后面。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_insertbefore.asp" target="_blank" rel="external">insertBefore()</a></td>
-<td>把匹配的元素插入到另一个指定的元素集合的前面。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_prepend.asp" target="_blank" rel="external">prepend()</a></td>
-<td>向每个匹配的元素内部前置内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_perpendto.asp" target="_blank" rel="external">prependTo()</a></td>
-<td>向每个匹配的元素内部前置内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_remove.asp" target="_blank" rel="external">remove()</a></td>
-<td>移除所有匹配的元素。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_removeattr.asp" target="_blank" rel="external">removeAttr()</a></td>
-<td>从所有匹配的元素中移除指定的属性。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_removeclass.asp" target="_blank" rel="external">removeClass()</a></td>
-<td>从所有匹配的元素中删除全部或者指定的类。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_replaceall.asp" target="_blank" rel="external">replaceAll()</a></td>
-<td>用匹配的元素替换所有匹配到的元素。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_replacewith.asp" target="_blank" rel="external">replaceWith()</a></td>
-<td>用新内容替换匹配的元素。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_text.asp" target="_blank" rel="external">text()</a></td>
-<td>设置或返回匹配元素的内容。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_toggleclass.asp" target="_blank" rel="external">toggleClass()</a></td>
-<td>从匹配的元素中添加或删除一个类。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_unwrap.asp" target="_blank" rel="external">unwrap()</a></td>
-<td>移除并替换指定元素的父元素。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/attributes_val.asp" target="_blank" rel="external">val()</a></td>
-<td>设置或返回匹配元素的值。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_wrap.asp" target="_blank" rel="external">wrap()</a></td>
-<td>把匹配的元素用指定的内容或元素包裹起来。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_wrapall.asp" target="_blank" rel="external">wrapAll()</a></td>
-<td>把所有匹配的元素用指定的内容或元素包裹起来。</td>
-</tr>
-<tr>
-<td><a href="http://www.w3school.com.cn/jquery/manipulation_wrapinner.asp" target="_blank" rel="external">wrapinner()</a></td>
-<td>将每一个匹配的元素的子内容用指定的内容或元素包裹起来。</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
+      <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp</a><br><a id="more"></a><br>| <a href="http://www.w3school.com.cn/jquery/attributes_addclass.asp" target="_blank" rel="external">addClass()</a> | 向匹配的元素添加指定的类名。              |<br>| —————————————- | ————————— |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_after.asp" target="_blank" rel="external">after()</a> | 在匹配的元素之后插入内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_append.asp" target="_blank" rel="external">append()</a> | 向匹配的元素内部追加内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_appendto.asp" target="_blank" rel="external">appendTo()</a> | 向匹配的元素内部追加内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_attr.asp" target="_blank" rel="external">attr()</a> | 设置或返回匹配元素的属性和值。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_before.asp" target="_blank" rel="external">before()</a> | 在每个匹配的元素之前插入内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_clone.asp" target="_blank" rel="external">clone()</a> | 创建匹配元素集合的副本。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_detach.asp" target="_blank" rel="external">detach()</a> | 从 DOM 中移除匹配元素集合。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_empty.asp" target="_blank" rel="external">empty()</a> | 删除匹配的元素集合中所有的子节点。           |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_hasclass.asp" target="_blank" rel="external">hasClass()</a> | 检查匹配的元素是否拥有指定的类。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_html.asp" target="_blank" rel="external">html()</a> | 设置或返回匹配的元素集合中的 HTML 内容。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_insertafter.asp" target="_blank" rel="external">insertAfter()</a> | 把匹配的元素插入到另一个指定的元素集合的后面。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_insertbefore.asp" target="_blank" rel="external">insertBefore()</a> | 把匹配的元素插入到另一个指定的元素集合的前面。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_prepend.asp" target="_blank" rel="external">prepend()</a> | 向每个匹配的元素内部前置内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_perpendto.asp" target="_blank" rel="external">prependTo()</a> | 向每个匹配的元素内部前置内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_remove.asp" target="_blank" rel="external">remove()</a> | 移除所有匹配的元素。                  |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_removeattr.asp" target="_blank" rel="external">removeAttr()</a> | 从所有匹配的元素中移除指定的属性。           |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_removeclass.asp" target="_blank" rel="external">removeClass()</a> | 从所有匹配的元素中删除全部或者指定的类。        |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_replaceall.asp" target="_blank" rel="external">replaceAll()</a> | 用匹配的元素替换所有匹配到的元素。           |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_replacewith.asp" target="_blank" rel="external">replaceWith()</a> | 用新内容替换匹配的元素。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_text.asp" target="_blank" rel="external">text()</a> | 设置或返回匹配元素的内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_toggleclass.asp" target="_blank" rel="external">toggleClass()</a> | 从匹配的元素中添加或删除一个类。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_unwrap.asp" target="_blank" rel="external">unwrap()</a> | 移除并替换指定元素的父元素。              |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_val.asp" target="_blank" rel="external">val()</a> | 设置或返回匹配元素的值。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrap.asp" target="_blank" rel="external">wrap()</a> | 把匹配的元素用指定的内容或元素包裹起来。        |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrapall.asp" target="_blank" rel="external">wrapAll()</a> | 把所有匹配的元素用指定的内容或元素包裹起来。      |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrapinner.asp" target="_blank" rel="external">wrapinner()</a> | 将每一个匹配的元素的子内容用指定的内容或元素包裹起来。 |</p>
 <p>获取dom获取表单</p>
 <p>document.getElementsByTagName（”from”）;</p>
 <p>使用dom获取 某元素src属性的方法</p>
@@ -653,9 +537,9 @@
       <title><![CDATA[jQuery 的选择器]]></title>
       <url>https://feahter.github.io/2016/09/13/jQuery%20%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/</url>
       <content type="html"><![CDATA[<p>jQuery 的选择器可谓之强大无比，这里简单地总结一下常用的元素查找方法 </p>
-<p>$(“#myELement”)    选择id值等于myElement的元素，id值不能重复在文档中只能有一个id值是myElement所以得到的是唯一的元素<br>$(“div”)           选择所有的div标签元素，返回div元素数组<br>$(“.myClass”)      选择使用myClass类的css的所有元素<br>$(“*”)             选择文档中的所有的元素，可以运用多种的选择方式进行联合选择：例如$(“#myELement,div,.myclass”) </p>
-<p>层叠选择器：<br>$(“form input”)         选择所有的form元素中的input元素<br>$(“#main &gt; *”)          选择id值为main的所有的子元素<br>$(“label + input”)     选择所有的label元素的下一个input元素节点，经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素<br>$(“#prev ~ div”)       同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签 </p>
-<p>基本过滤选择器：<br>$(“tr:first”)               选择所有tr元素的第一个<br>$(“tr:last”)                选择所有tr元素的最后一个<br>$(“input:not(:checked) + span”)<br><a id="more"></a><br>过滤掉：checked的选择器的所有的input元素 </p>
+<p>$(“#myELement”)    选择id值等于myElement的元素，id值不能重复在文档中只能有一个id值是myElement所以得到的是唯一的元素<br>$(“div”)           选择所有的div标签元素，返回div元素数组<br>$(“.myClass”)      选择使用myClass类的css的所有元素<br>$(“<em>“)             选择文档中的所有的元素，可以运用多种的选择方式进行联合选择：例如$(“#myELement,div,.myclass”)<br><a id="more"></a><br>层叠选择器：<br>$(“form input”)         选择所有的form元素中的input元素<br>$(“#main &gt; </em>“)          选择id值为main的所有的子元素<br>$(“label + input”)     选择所有的label元素的下一个input元素节点，经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素<br>$(“#prev ~ div”)       同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签 </p>
+<p>基本过滤选择器：<br>$(“tr:first”)               选择所有tr元素的第一个<br>$(“tr:last”)                选择所有tr元素的最后一个<br>$(“input:not(:checked) + span”)   </p>
+<p>过滤掉：checked的选择器的所有的input元素 </p>
 <p>$(“tr:even”)               选择所有的tr元素的第0，2，4… …个元素（注意：因为所选择的多个元素时为数组，所以序号是从0开始） </p>
 <p>$(“tr:odd”)                选择所有的tr元素的第1，3，5… …个元素<br>$(“td:eq(2)”)             选择所有的td元素中序号为2的那个td元素<br>$(“td:gt(4)”)             选择td元素中序号大于4的所有td元素<br>$(“td:ll(4)”)              选择td元素中序号小于4的所有的td元素<br>$(“:header”)<br>$(“div:animated”)<br>内容过滤选择器： </p>
 <p>$(“div:contains(‘John’)”) 选择所有div中含有John文本的元素<br>$(“td:empty”)           选择所有的为空（也不包括文本节点）的td元素的数组<br>$(“div:has(p)”)        选择所有含有p标签的div元素<br>$(“td:parent”)          选择所有的以td为父节点的元素数组<br>可视化过滤选择器： </p>
