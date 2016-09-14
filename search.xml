@@ -4,6 +4,151 @@
   
     
     <entry>
+      <title><![CDATA[ST3私人定制]]></title>
+      <url>https://feahter.github.io/2016/09/13/ST3%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6/</url>
+      <content type="html"><![CDATA[<p><strong>ST3的私人订制。</strong></p>
+<h2 id="一、官网下载安装"><a href="#一、官网下载安装" class="headerlink" title="一、官网下载安装"></a>一、官网下载安装</h2><p><strong>1.</strong><a href="http://www.sublimetext.com/3" target="_blank" rel="external"><strong>官网</strong></a><strong>下载。</strong></p>
+<p> <img src="../images/st3download.png" alt="st3download"></p>
+<p><strong>2.软件安装。</strong></p>
+<h2 id="二、正版激活"><a href="#二、正版激活" class="headerlink" title="二、正版激活"></a>二、正版激活</h2><p><strong>Sublime Text 3 许可证</strong></p>
+<p><em>—– BEGIN LICENSE —–</em><br><em>Nicolas Hennion</em><br><em>Single User License</em><br><em>EA7E-866075</em><br><em>8A01AA83 1D668D24 4484AEBC 3B04512C</em><br><em>827B0DE5 69E9B07A A39ACCC0 F95F5410</em><br><em>729D5639 4C37CECB B2522FB3 8D37FDC1</em><br><em>72899363 BBA441AC A5F47F08 6CD3B3FE</em><br><em>CEFB3783 B2E1BA96 71AAF7B4 AFB61B1D</em><br><em>0CC513E7 52FF2333 9F726D2C CDE53B4A</em><br><em>810C0D4F E1F419A3 CDA0832B 8440565A</em><br><em>35BF00F6 4CA9F869 ED10E245 469C233E</em><br><em>—— END LICENSE ——</em></p>
+<p><strong>1.打开Sublime菜单 &gt; help &gt; enter License</strong></p>
+<p><strong>2.复制填入如上许可证或自行搜索一枚，确认激活。</strong></p>
+<h2 id="三、插件管理器安装"><a href="#三、插件管理器安装" class="headerlink" title="三、插件管理器安装"></a>三、插件管理器安装</h2><p><strong>1.<code>ctrl+~</code> 打开ST自带控制台，复制如下代码至输入框，回车等待。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> urllib.request,os,hashlib; h = <span class="string">'2915d1851351e5ee549c20394736b442'</span> + <span class="string">'8bc59f460fa1548d1514676163dafc88'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).read(); dh = hashlib.sha256(by).hexdigest(); print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> open(os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by)</div></pre></td></tr></table></figure>
+<p><strong>2.安装完成后，重启ST，至工具栏 Preferences 见到Package Control 项即安装成功</strong>。(</p>
+<p>Package Control 用于ST插件的管理，安装、卸载、更新等工作。</p>
+<p>)</p>
+<h2 id="四、插件安装"><a href="#四、插件安装" class="headerlink" title="四、插件安装"></a>四、插件安装</h2><p><strong>1.插件安装</strong><br><code>Ctrl+Shift+P</code>打开插件管理器，输入框输入install，选择安装插件功能，等待弹出安装框，复制或填入要安装的插件名称，回车等待。(每一个插件安装的过程如上，部分安装不了的可能需要科学上网。)<br><strong>插件表：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">插件</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ChineseLocalization</td>
+<td style="text-align:center">汉化</td>
+</tr>
+<tr>
+<td style="text-align:center">HTML5</td>
+<td style="text-align:center">H5标签拓展</td>
+</tr>
+<tr>
+<td style="text-align:center">JsFormat</td>
+<td style="text-align:center">javascript格式化</td>
+</tr>
+<tr>
+<td style="text-align:center">CSS Format</td>
+<td style="text-align:center">CSS</td>
+</tr>
+<tr>
+<td style="text-align:center">Tag</td>
+<td style="text-align:center">HTML</td>
+</tr>
+<tr>
+<td style="text-align:center">Brackethighlighter</td>
+<td style="text-align:center">标签对标记</td>
+</tr>
+<tr>
+<td style="text-align:center">styleToken</td>
+<td style="text-align:center">标记颜色代码</td>
+</tr>
+<tr>
+<td style="text-align:center">SideBarEnhancements</td>
+<td style="text-align:center">增强型侧边栏</td>
+</tr>
+<tr>
+<td style="text-align:center">BufferScroll</td>
+<td style="text-align:center">代码折叠状态保留</td>
+</tr>
+<tr>
+<td style="text-align:center">Emmet</td>
+<td style="text-align:center">前端神器</td>
+</tr>
+<tr>
+<td style="text-align:center">FileHeader</td>
+<td style="text-align:center">文件模板，保存文件修改时间</td>
+</tr>
+<tr>
+<td style="text-align:center">Better Completion</td>
+<td style="text-align:center">全能代码提示</td>
+</tr>
+<tr>
+<td style="text-align:center">ConvertToUTF8</td>
+<td style="text-align:center">GBK编码兼容</td>
+</tr>
+<tr>
+<td style="text-align:center">PackageResourceViewer</td>
+<td style="text-align:center">插件</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.用户设置</strong></p>
+<p>工具栏 Preferences – Settings-User，打开用户设置文件<br>选择性填入如下内容：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">"trim_trailing_white_space_on_save": true,</div><div class="line">"ensure_newline_at_eof_on_save": true,</div><div class="line">"translate_tabs_to_spaces": true,</div><div class="line">"tab_size": 2,</div><div class="line">"draw_minimap_border": true,</div><div class="line">"save_on_focus_lost": true,</div><div class="line">"highlight_line": true,</div><div class="line">"word_wrap": "true",</div><div class="line">"fade_fold_buttons": false,</div><div class="line">"bold_folder_labels": true,</div><div class="line">"highlight_modified_tabs": true,</div><div class="line">"default_line_ending": "unix", </div><div class="line">"auto_find_in_selection": true</div></pre></td></tr></table></figure></p>
+<p>trim_trailing_white_space_on_save,自动移除行尾多余空格。<br>ensure_newline_at_eof_on_save,文件末尾自动保留一个空行，防止文件在某些开发环境失效。<br>translate_tabs_to_spaces,代码 tab 对齐转换为空格对齐，<br>tab_size,配合设置空格数。这个需求因人而异了，不喜欢可以去掉。<br>draw_minimap_border,用于右侧代码预览时给所在区域加上边框，方便识别。<br>save_on_focus_lost,窗口失焦立即保存文件，嘛嘛再也不用担心你忘记保存了。<br>highlight_line,当前行高亮。<br>word_wrap,设置自动换行。<br>fade_fold_buttons,默认显示行号右侧的代码段闭合展开三角号。<br>bold_folder_labels,侧边栏文件夹显示加粗，区别于文件。<br>highlight_modified_tabs,高亮未保存文件。<br>default_line_ending: “unix”,使用 unix 风格的换行符。<br>auto_find_in_selection: true,开启选中范围内搜索(而不是整个文档)</p>
+<p><strong>3.快捷键设置</strong></p>
+<p>工具栏 Preferences – key Bindings-User 打开用户按键绑定</p>
+<p>选择性填入如下内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123; "keys": ["alt+space"], "command": "auto_complete" &#125;,</div><div class="line">&#123; "keys": ["alt+space"], "command": "replace_completion_with_auto_complete", "context":</div><div class="line">  [</div><div class="line">    &#123; "key": "last_command", "operator": "equal", "operand": "insert_best_completion" &#125;,</div><div class="line">    &#123; "key": "auto_complete_visible", "operator": "equal", "operand": false &#125;,</div><div class="line">    &#123; "key": "setting.tab_completion", "operator": "equal", "operand": true &#125;</div><div class="line">  ]</div><div class="line">&#125;,</div><div class="line">&#123; "keys": ["ctrl+alt+d"], "command": "goto_definition" &#125;,</div></pre></td></tr></table></figure>
+<p>ST3默认的代码提示快捷键为 <code>ctrl + space</code> ，但是这个快捷键在天朝一直都被输入法霸占Mac用户泥奏凯 ，修改快捷键为 <code>alt+space</code> 。<br>ST3自带跳转到函数或CSS定义功能，在DreamWeaver中使用 <code>ctrl+d</code> 打开CSS样式定义源面板。</p>
+<p>使用<code>ctrl+alt+d</code> 定义这个功能，ST3默认的 <code>ctrl+d</code> 已有选择相同字符的用途。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">快捷键</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>ctrl+shift+p</strong></td>
+<td style="text-align:center">所有命令</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+g</td>
+<td style="text-align:center">跳转行</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+/</td>
+<td style="text-align:center">注释</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+d</td>
+<td style="text-align:center">选择相同字符</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+shift+up/down</td>
+<td style="text-align:center">整行移动</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+alt+right</td>
+<td style="text-align:center">跳到下一个编辑点</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+u</td>
+<td style="text-align:center">图片原始大小更新</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+shift+g</td>
+<td style="text-align:center">批量格式生成</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+shift+y</td>
+<td style="text-align:center">直接公式计算</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrl+up</td>
+<td style="text-align:center">CSS数值加减1（alt+up 数值加减0.1）</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[jQuery操作dom元素]]></title>
       <url>https://feahter.github.io/2016/09/13/jQuery%E6%93%8D%E4%BD%9Cdom%E5%85%83%E7%B4%A0/</url>
       <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp</a></p>
