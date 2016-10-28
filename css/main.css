@@ -2089,6 +2089,7 @@ a.search-result {
 }
 .category-all-page .category-list-item {
   margin: 5px 10px;
+  display: inline-block;
 }
 .category-all-page .category-list-count {
   color: #bbb;
