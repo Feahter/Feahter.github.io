@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2016-11-25T03:31:34.717Z</updated>
+  <updated>2016-11-28T09:56:53.871Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Bootstrap</title>
+    <link href="https://feahter.github.io/2016/11/28/%E5%85%B3%E4%BA%8EBootstrap/"/>
+    <id>https://feahter.github.io/2016/11/28/关于Bootstrap/</id>
+    <published>2016-11-28T03:31:18.000Z</published>
+    <updated>2016-11-28T09:56:53.871Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="名由："><a href="#名由：" class="headerlink" title="名由："></a>名由：</h4><p>bootstrap:意为引导，引导有杠杆的作用。在计算机用语中为引导程序的意思。</p>
+<p>很多人会对Bootstrap这个名字感到困惑。英语Bootstrap的意思是靴带，来自短语：“pull oneself up by one′s bootstrap”，18世纪德国文学家拉斯伯（Rudolf Erich Raspe）的小说《巴龙历险记（或译为终极天将）》（Adventures of Baron Munchausen) 记述道：“巴龙掉到湖里沉到湖底，在他绝望的时候，他用自己靴子上的带子把自己拉了上来。”现意指不借助别人的力量，凭自己的努力，终于获得成功。统计学里“bootstrap”法是指用原样本自身的数据抽样得出新的样本及统计量，根据其意现在普遍将其译为“自助法”。</p>
+<p>下面引用的是谢益辉博士关于Bootstrap （和 Jackknife）基本思想的论述，让我们对于Bootstrap 建立一个初步的关于统计学的认识：</p>
+<p>在统计的世界，我们面临的总是只有样本，Where there is sample, there is uncertainty，正因为不确定性的存在，才使统计能够生生不息。传说统计学家、数学家和物理学家乘坐一列火车上旅行，路上看到草原上有一只黑羊，统计学家说，“基于这个样本来看，这片草原上所有的羊都是黑的”，数学家说，“只有眼前这只羊是黑的”，物理学家则说，“你们都不对，只有羊的这一面是黑的”。这是关于统计和其他学科的一个玩笑话，说明了统计的一些特征，比如基于样本推断总体。</p>
+<p>一般情况下，总体永远都无法知道，我们能利用的只有样本，现在的问题是，样本该怎样利用呢？Bootstrap的奥义也就是：既然样本是抽出来的，那我何不从样本中再抽样（Resample）？Jackknife的奥义在于：既然样本是抽出来的，那我在作估计、推断的时候“扔掉”几个样本点看看效果如何？既然人们要质疑估计的稳定性，那么我们就用样本的样本去证明吧。</p>
+<p>John Fox的那一系列附录中有一篇叫“Bootstrapping Regression Models”，当我看到第二页用方框框标出那句话时，我才对Bootstrap的思想真正有了了解（之前迷茫了很长时间）。Bootstrap的一般的抽样方式都是“有放回地全抽”（其实样本量也要视情况而定，不一定非要与原样本量相等），意思就是抽取的Bootstrap样本量与原样本相同，只是在抽样方式上采取有放回地抽，这样的抽样可以进行B次，每次都可以求一个相应的统计量/估计量，最后看看这个统计量的稳定性如何（用方差表示）。Jackknife的抽样痕迹不明显，但主旨也是取样本的样本，在作估计推断时，每次先排除一个或者多个样本点，然后用剩下的样本点求一个相应的统计量，最后也可以看统计量的稳定性如何。</p>
+<p>在R中简单随机抽样的函数是sample()，其中有个参数replacement表示是否放回，经典的抽样基本都是不放回（replace = FALSE），而Bootstrap则是replace = TRUE；从FALSE到TRUE，小小的一个变化，孕育了Bootstrap的经典思想。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><a href="https://github.com/twbs/bootstrap" target="_blank" rel="external">Bootstrap</a>，作者:<a href="https://github.com/mdo" target="_blank" rel="external">Mark Otto</a>和<a href="http://twitter.com/fat" target="_blank" rel="external">Jacob Thornton</a>。Twitter推出的CSS框架。</p>
+<p>移动优先的自适应解决方案。</p>
+<p><a href="http://getbootstrap.com/" target="_blank" rel="external">官网</a></p>
+<p><a href="http://www.bootcss.com/" target="_blank" rel="external">中文网站</a></p>
+<p><a href="http://v3.bootcss.com/getting-started/" target="_blank" rel="external">起步文档</a></p>
+<p>在要使用的html文件头引入（本地或者CDN均可）bootstrap.min.css文件即可开始使用。例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//本地</div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/bootstrap.min.css"</span>&gt;</span></div><div class="line">//CDN</div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="关于自适应："><a href="#关于自适应：" class="headerlink" title="关于自适应："></a>关于自适应：</h3><p>为了确保适当的绘制和触屏缩放，添加meta标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>添加 <code>user-scalable=no</code> 可以禁止屏幕缩放。这样禁用缩放后，用户的视口只能滚动屏幕，就能让你的网站在移动端看上去更像原生应用。但不推荐所有网站使用，请视自己的需求而定。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>从浏览器内核入手优化兼容：</p>
+<p>添加meta标签，如果网页以IE8内核浏览器打开，如果安装了GCF（Google Chrome Frame谷歌内嵌浏览器框架GCF），则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>添加meta标签，双核浏览器时（主要针对国产360浏览器），使浏览器默认使用极速模式（webkit内核）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>bootstrap的栅格系统基于媒体查询，为了使IE8兼容媒体查询和部分html5的标签，在head标签闭合前加入如下代码段（如果浏览器内核为IE9及其以下版本时调用文件）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if lte IE 9]&gt;</span></div><div class="line">  &lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt;</div><div class="line">  &lt;script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"&gt;&lt;/script&gt;</div><div class="line">  &lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>注意前端代码的模块化组织，降低css选择器的重复性，以大的模块区分功能块。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container-fluid"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-12"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>.container-fluid（100%宽度）与.container（固定宽度）选其一作为最外侧的盒子，依据为内容是否要占据全部视口。.row作为缓冲带必须嵌套有。lg大屏（&gt;=1200px），md中屏(&gt;=992px)，sm小屏(&gt;=768px)，xs超小屏(&lt;768px)。将外层div均分为12等分，可以任意设置组合，每个col自带15px的padding属性。栅格系统是自适应布局的核心。根据模块添加类.hidden-md可实现对应尺寸隐藏，达到响应式目的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;名由：&quot;&gt;&lt;a href=&quot;#名由：&quot; class=&quot;headerlink&quot; title=&quot;名由：&quot;&gt;&lt;/a&gt;名由：&lt;/h4&gt;&lt;p&gt;bootstrap:意为引导，引导有杠杆的作用。在计算机用语中为引导程序的意思。&lt;/p&gt;
+&lt;p&gt;很多人会对Bootstrap这个名字
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[设计模式]</title>
