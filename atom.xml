@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2016-12-05T06:53:32.075Z</updated>
+  <updated>2016-12-05T06:55:40.180Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="https://feahter.github.io/2016/11/30/thinkphp%E5%AE%9E%E8%B7%B5/"/>
     <id>https://feahter.github.io/2016/11/30/thinkphp实践/</id>
     <published>2016-11-30T01:25:24.000Z</published>
-    <updated>2016-12-05T06:53:32.075Z</updated>
+    <updated>2016-12-05T06:55:40.180Z</updated>
     
     <content type="html"><![CDATA[<!-- ![thinkphp](http://oe3di974t.bkt.clouddn.com/thinkphp.png) -->
-<p><img src="http://oe3di974t.bkt.clouddn.com/thinkphp.png" alt="" class="myimg"></p>
+<div><img src="http://oe3di974t.bkt.clouddn.com/thinkphp.png" alt="thinkphp" class="myimg"></div>
+
 <p>ThinkPHP是一个快速、兼容而且简单的轻量级国产PHP开发框架。鉴于5.0之后为迎合php7.0而重新构建的框架的不稳定性，我们使用截至目前较新较稳定的3.2.3版。（实践基础默认web环境已搭建好）</p>
 <p><a href="http://www.thinkphp.cn/" target="_blank" rel="external">thinkphp官网</a></p>
 <p><a href="http://document.thinkphp.cn/manual_3_2.html" target="_blank" rel="external">thinkphp完全开发手册</a></p>
@@ -64,7 +65,7 @@
     <summary type="html">
     
       &lt;!-- ![thinkphp](http://oe3di974t.bkt.clouddn.com/thinkphp.png) --&gt;
-&lt;p&gt;&lt;img src=&quot;http://oe3di974t.bkt.clouddn.com/thinkphp.png&quot; alt=&quot;&quot; class
+&lt;div&gt;&lt;img src=&quot;http://oe3di974t.bkt.clouddn.com/thinkphp.png&quot; alt=&quot;think
     
     </summary>
     
