@@ -6,7 +6,8 @@
     <entry>
       <title><![CDATA[thinkphp实践]]></title>
       <url>https://feahter.github.io/2016/11/30/thinkphp%E5%AE%9E%E8%B7%B5/</url>
-      <content type="html"><![CDATA[<p><img src="http://oe3di974t.bkt.clouddn.com/thinkphp.png" alt="thinkphp"></p>
+      <content type="html"><![CDATA[<!-- ![thinkphp](http://oe3di974t.bkt.clouddn.com/thinkphp.png) -->
+<p><img src="http://oe3di974t.bkt.clouddn.com/thinkphp.png" alt="" class="myimg"></p>
 <p>ThinkPHP是一个快速、兼容而且简单的轻量级国产PHP开发框架。鉴于5.0之后为迎合php7.0而重新构建的框架的不稳定性，我们使用截至目前较新较稳定的3.2.3版。（实践基础默认web环境已搭建好）</p>
 <p><a href="http://www.thinkphp.cn/" target="_blank" rel="external">thinkphp官网</a></p>
 <p><a href="http://document.thinkphp.cn/manual_3_2.html" target="_blank" rel="external">thinkphp完全开发手册</a></p>
