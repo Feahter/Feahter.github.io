@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2017-05-17T01:32:48.615Z</updated>
+  <updated>2017-05-17T01:42:38.987Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生算法设计大纲/</id>
     <published>2017-05-17T01:27:31.000Z</published>
-    <updated>2017-05-17T01:32:48.615Z</updated>
+    <updated>2017-05-17T01:42:38.987Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311036030 Course Name Data Structures &amp; Algorithm<br>Course<br>Attribute<br>□Compulsory □Selective Course Language □English █Chinese<br>Credit Hour 3 Period 48<br>Semester □First Fall □First Spring █Second Fall □Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Li xiaohua，Zuo hang，Sun Jieping, Zhu Hong<br>Description<br>This course thoroughly covers key data structures at the undergraduate<br>level. With a focus on how to assess costs and benefits, it teaches students<br>how to create efficient data structures and algorithms and how to adopt<br>to new design challenges. Students are taught how to assess applications<br>needs to find data structures with matching capabilities.</p>
 <p>Prerequisites C Language Programming<br>Discrete Mathematics</p>
@@ -39,6 +39,23 @@
 <li>Graphs. 9h<br>Terminology and Representations. Graph Implementations. Graph Traversals. Shortest-Paths<br>Problems. Minimum-Cost Spanning Trees.<br>3<br>Total:<br>Lecture: 47 QA: 1<br>Tools &amp;<br>Environment<br>This course will require to use VC++ 6.0 software for programming<br>Projects<br>Project: City database Management System<br>Requirements:<br>1） Using BST or linked lis t to store the records；<br>2） Each node should contain the name of city and the coordination of city(denoted using x,y)；<br>3） Organize the node in database according to the name of city<br>4） Insert single or multiple nodes, delete or index node in accordance with name or coordination.<br>5） Print all records which have certain distance with a given city<br>6） Statistic the runtime of each operation<br>7) encourage adding in innovate functions<br>Development environment:<br>VC++ 6.0</li>
 </ol>
 <p>Version No： 1.0<br>Author： Xiaohua Li Date： 2008-7 -15<br>Auditor： Mei Hong Date： 2008-7-25<br>Signature of leader：<br>Date： 2008-7-30</p>
+<h3 id="中文翻译："><a href="#中文翻译：" class="headerlink" title="中文翻译："></a>中文翻译：</h3><p><strong>软件工程学院</strong><br><strong>本科课程大纲</strong><br>课程编号311036030课程名称数据结构与算法<br>课程<br>属性<br>□强制□选修课程语言□英语█中文<br>信用时间3期48<br>学期□第一次秋季□第一次春季█第二次秋季□二春<br>□ 三季□第三弹□第四秋季□第四弹簧<br>导师李晓华，佐恒，孙吴阶平，朱虹<br>介绍<br>本课程涵盖彻底在本科关键数据结构<br>水平。重点关注如何评估成本和收益，它教会学生<br>如何创建高效的数据结构和算法，以及如何<br>应对新的设计挑战。</p>
+<p>前提条件C语言编程<br>离散数学</p>
+<p>教科书数据结构和算法分析的实践介绍，Clifford A.Shaffer<br>，Prentice Hall 2001.第二版<br>资源<br>①A.V.Aho，JEHopcroft和JDUllman，数据结构和算法，Addison - Wesley<br>Publishing Company，Inc.，1983<br>②Cliford A. Shaffer，数据结构与算法分析实践介绍 -<br>C ++）电子工业出版社。<br>分级任务，班级参与（40％），期末考试（60％）<br>专题</p>
+<ol>
+<li>数据结构和算法。1h<br>数据结构的哲学。抽象数据类型和数据结构。问题，算法<br>和程序。</li>
+<li>数学初步 2h<br>2<br>ets和关系。杂项符号 对数。递归。总结和反复。<br>数学证明技术。估计。</li>
+<li>算法分析。2h<br>简介 最佳，最差和平均的案例。更快的计算机，还是更快的算法？<br>渐近分析。计算程序的运行时间。分析问题 常见的<br>误解。多个参数。空间界限 一些实际注意事项</li>
+<li>列表，堆栈和队列。10h<br>列表。词典ADT。堆栈。队列。</li>
+<li>二叉树。6h<br>定义和属性。二叉树遍历。二叉树节点实现。二进制<br>搜索树。堆和优先队列。霍夫曼编码树。</li>
+<li>非二叉树。4h<br>通用树定义和术语。父指针实现。一般树的<br>实现。Kary树。顺序树实现。</li>
+<li>内部排序 5h<br>排序术语和符号。三… Q（n2<br>）排序算法。外壳排序。快速排序<br>合并排序 堆排序 Bin排序和基数排序。排序算法的实证比较。<br>下限排序。</li>
+<li>文件处理和外部排序。2h<br>主要与次要存储。磁盘驱动器 缓冲池和缓冲池。程序员的<br>文件视图。外部排序。外部排序的简单方法。更换选择<br>多路合并</li>
+<li>搜索。3h<br>搜索排序数组。自组织名单 搜索集合。散列。</li>
+<li>索引。3h<br>线性索引。ISAM。树索引。2-3棵树。B-树。</li>
+<li>图表。9h<br>术语和表示。图表实现。图形遍历。最短路径<br>问题。最小成本生成树。<br>3<br>总计：<br>讲座：47 QA：1<br>工具与<br>环境<br>本课程将需要使用VC ++ 6.0软件编程<br>项目<br>项目：城市数据库管理系统<br>要求：<br>1）使用BST或链接存储记录;<br>2）每个节点应包含城市的名称和城市的协调（用x，y表示）;<br>3）根据城市的名称组织数据库中的节点<br>4）根据名称或协调插入单个或多个节点，删除或索引节点。</li>
+</ol>
+<p>版本号：1.0<br>作者：李晓华<br>日期：2008-7-15<br>审计人<br>：梅红日期：2008-7-25 领导签名：日期：2008-7-30</p>
 ]]></content>
     
     <summary type="html">
@@ -61,7 +78,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生计算机网络大纲/</id>
     <published>2017-05-17T01:27:19.000Z</published>
-    <updated>2017-05-17T01:31:35.079Z</updated>
+    <updated>2017-05-17T01:41:36.568Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311015040 Course Name Computer Networks<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English □Chinese<br>Credit Hour 4 Period 80<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors YANG Pin, RUAN Shuhua, LIN Feng<br>Description<br>This course provides an introduction to fundamental concepts in the design and implementation of<br>computer communication networks, their protocols, and applications. Topics to be covered<br>include: overview of network architectures, applications, network programming interfaces (e.g.,<br>sockets), transport, congestion, routing, and data link protocols, addressing, local area networks,<br>wireless networks, network security, and network management. Examples will be drawn primarily<br>from the Internet (e.g., TCP, UDP, and IP) protocol suite.<br>Prerequisites<br>C Language Programming<br>Data Structures &amp; Algorithm<br>Operating System<br>Textbook Computer Networking: A Top Down Approach Featuring the Internet (3rd ed.), J.F. Kurose and<br>K.W. Ross, Addison-Wesley Longman.<br>Resource</p>
 <ol>
@@ -78,6 +95,21 @@
 <li>Chat Room</li>
 </ol>
 <p>Version No： 1.0<br>Author： Pin Yang Date： 2008-7 -15<br>Auditor： Mei Hong Date： 2008-7-25<br>Signature of leader：<br>Date： 2008-7-30</p>
+<h3 id="中文翻译："><a href="#中文翻译：" class="headerlink" title="中文翻译："></a>中文翻译：</h3><p><strong>软件工程学院</strong><br><strong>本科课程大纲</strong><br>课程编号311015040课程名称计算机网络<br>课程<br>属性<br>■强制□选修课程语言■英文□中文授课<br>时间4期80<br>学期□第一次秋季□ 初春□二秋■二春<br>□三秋□第三春□第四届秋季□第四届春季<br>导师杨Pin<br>阮书华林凤简介<br>本课程介绍了<br>计算机通讯网络及其协议及应用的设计与实现中的基本概念。要涵盖的主题<br>包括：网络架构，应用程序，网络编程接口（例如，<br>套接字），传输，拥塞，路由，<br>数据链路协议，寻址，局域网， 无线网络，网络安全和网络管理。实例主要<br>来自互联网（例如TCP，UDP和IP）协议套件。<br>前提<br>条件C语言编程<br>数据结构与算法<br>操作系统<br>教材计算机网络：自上而下的方法，具有互联网（第3版），JF Kurose和<br>K.W. 罗斯，艾迪生威斯利龙曼。<br>资源 前提条件C语言编程数据结构与算法操作系统教材计算机网络：自上而下的方法，具有互联网（第3版），JF Kurose和K.W. 罗斯，艾迪生威斯利龙曼。资源 前提条件C语言编程数据结构与算法操作系统教材计算机网络：自上而下的方法，具有互联网（第3版），JF Kurose和K.W. 罗斯，艾迪生威斯利龙曼。资源</p>
+<ol>
+<li>计算机网络：系统方法（第4版），Larry L. Peterson和Bruce S. Davie，<br>中国机械出版社，2007</li>
+<li>计算机网络（第4版）：Andrew S. Tanenbaum，清华大学出版社</li>
+<li>TCP / IP Illustrated，Volume 1：The Protocols，W.Richard Stevens，China Machine Press，2000</li>
+<li>Unix网络编程，第1卷：网络API：套接字和XTI，W. Richard<br>Stevens，清华大学出版社，1998</li>
+<li>其他相关网站<br>评分<br>分配（25％）<br>项目（10％）<br>实验室（15％）<br>期末考试（50％）<br>主题<br>第1部分：简介（9H）<br>什么是互联网，什么是协议？<br>网络边缘，核心和接入网络<br>物理媒体<br>2<br>分组交换网络中的延迟和丢失<br>协议层及其服务模型<br>计算机网络和互联网<br>的简史第2部分：应用层（12H）<br>应用层协议原理<br>万维网：HTTP<br>文件传输：<br>互联网中<br>的FTP 电子邮件Internet的目录服务：DNS<br>Web服务（WSDL，SOAP，互联网中的互联网协议路由什么是路由器内部？（选项）第5部分：链路层和局域网（9H）数据链路层：简介，服务错误检测和纠正多路访问协议和LAN LAN地址和ARP 以太网PPP：点到点协议ATM ）第6部分：无线网络（3G ）WiFi：IEEE 802.11 处理移动性案例研究：GSM蜂窝网络，移动IP 第7部分：计算机网络中的安全（可选）（3H）什么是网络安全？攻击与对策3 加密认证原则：你是谁？完整性密钥分发和认证防火墙案例研究第8部分：网络管理（可选）（3H）什么是网络管理？互联网管理框架ASN.1 工具与环境Ethereal WINDOWS 2003 SERVER，LINUX 项目实验室：（12H）</li>
+<li>空灵</li>
+<li>DHCP服务器，FTP服务器，DNS服务器和WEB服务器的配置</li>
+<li>开关和路由器<br>项目：（8H）<br>插座通信</li>
+<li>多线程Web服务器</li>
+<li>邮件客户端</li>
+<li>聊天室</li>
+</ol>
+<p>版本号：1.0<br>作者：Pin Yang<br>日期：2008-7-15审核员：梅红日期：2008-7-25<br>领导签名：<br>日期：2008-7-30</p>
 ]]></content>
     
     <summary type="html">
@@ -100,7 +132,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生操作系统大纲/</id>
     <published>2017-05-17T01:27:01.000Z</published>
-    <updated>2017-05-17T01:31:47.102Z</updated>
+    <updated>2017-05-17T01:47:43.603Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311006040 Course Name Operating System<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English ■Chinese<br>Credit Hour 4 Period 64<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Zhao Kui, Liang Gang, Hu Xiao-qin<br>Description<br>This course covers the fundamentals of Operating Systems and Systems<br>Programming, revealing the mysteries of the software layer between application<br>programs and hardware, and covering techniques and algorithms for dealing with<br>thorny problems of resource management, sharing, and protection, as well as<br>concurrency and complex systems. Perhaps best of all, four programming projects<br>give students the chance to implement important and realistic subsystems of a small<br>operating system kernel.<br>Between the lectures, reading, and programming assignments, we hope that the course<br>will help students become not only an OS expert and/or kernel hacker, but also a<br>better programmer and user of computer systems, and a better computer scientist who<br>has insight into managing complex and concurrent interactions within and between<br>hardware and software systems!<br>Prerequisites<br>C Language Programming<br>Computer Architecture<br>Data Structures and Algorithms</p>
 <p>Textbook William Stallings, Operating Systems Internals and Design Principles (Fifth Edition),Publish<br>House of Electronics Industry,2007<br>2<br>Resource<br>• Course Webpage: cs.scu.edu.cn/~zhaokui<br>All vital information will appear on the course webpage, including lecture<br>notes and programming assignments.<br>• Mailing list: zhaokui@cs.scu.edu.cn<br> lianggang@cs.scu.edu.cn<br> huxiaoqin@cs.scu.edu.cn<br>The staff email is where you should send questions regarding course<br>administration and any questions which would be inappropriate if posted<br>publicly to the newsgroup (i.e. questions that contain your code or other<br>private information).<br>• Reference:</p>
@@ -138,6 +170,44 @@
 <li>The command line prompt must contain the pathname of the current directory.<br>º Write a simple manual describing how to use the shell. The manual should contain<br>enough detail for a beginner to linux to use it;<br>º The source code must be extensively commented and appropriately structured to<br>allow your peers to understand and easily maintain the code;<br>º Details of submission procedures will be supplied well before the deadlines;<br>º The submission should contain only source code files, include files, a makefile and<br>the readme file.<br>Lab 2: Upgrade the Nachos thread management model<br>Requirement:<br>Modify the source code of the Nachos to achieve the following objectives:<br>º Expand thread data structure and add the “user ID, thread ID” two members of the<br>data structure of Nachos. Meanwhile, add the safeguard mechanism of these two data<br>members in the Nachos existing thread management model;<br>º Expand the existing state of threads. There are only “new”, “ready”, “block” and<br>“running” four states in Nachos. Please add “suspending” state in Nachos. The<br>so-called “hang up” refers to the current thread disk image stored in documents rather<br>than memory. “Suspend” state is the important foundation of the future realization of<br>virtual memory management.<br>º Modify thread scheduling algorithm. Change the thread management mechanism to<br>the “preemptive.” You can add “timing” and “priority scheduling,” “Multi-Queue”<br>different algorithm into Nachos thread management model.<br>º Add the global thread management mechanism and expand the existing operations<br>command in Nachos. For example, you can add a command called “ThreadView” in<br>order to show the current existence of all the threads of information, including the<br>“user ID”, “Thread ID”, “Current status” on the screen.<br>º Design a mutual exclusion and synchronization example. After the above<br>modifications, you can design a program to implement one mutual exclusion and<br>synchronization classic solution. For example, you can choose “philosopher dining”<br>problem and create five philosopher threads which have same user ID and follow the<br>“signal of” mechanisms to correct the operation in your program. You can also choose<br>“producers - consumers”, “Sleep Barber of Seville” and other classic IPC problems to<br>6<br>finish this task.<br>Lab 3: Upgrade the Nachos File management model<br>Requirement:<br>Modify the source code of the Nachos to achieve the following objectives:<br>º Add longer document name support and the following described information in<br>Nachos kernel.<br>File Types<br>Create time<br>Document the last visit time<br>File trails<br>º Achieve dynamic content distribution according to the file size. Now，Nachos allocate<br>the space according to the designated size of when creating a file and if we want to<br>amend file, we are limited to allocated space. So, modify the kernel to satisfy the<br>dynamic distribution.<br>º Modify the file index means in Nachos to achieve unlimited length of documents. You<br>can refer to the file index mechanism of Unix to achieve this requirement.<br>º Modify the directory structure to implement multi-level directory which there is no<br>restriction on the number of the files.<br>º Achieve synchronous operation of the file system. Directory files, bitmap files are all<br>critical resources and they do not allow multiple processes at the same time visit. The<br>current system did not impose synchronous control, so, modify this defect.<br>Lab 4: Upgrade the Nachos Memory management model<br>Requirement:<br>Modify the source code of the Nachos to achieve the following objectives:<br>º Add the data structure to describe the process of memory and the corresponding<br>relations. That is, add the “process ID” member in memory describing structure and it<br>can make understand the distribution of memory easily and facilitate to measure the<br>performance of memory management.<br>º Achieve the multi-programming, which there are multiple programs co-exist in<br>memory.<br>º Modify the Nachos to support virtual memory. Nachos only support the process<br>which it’s size is not more than the size of the memory. If the size of process is more<br>7<br>than the size of the memory, it will not be execute. So, amend this defect to support<br>big size process.<br>º Implementation monitoring thread and it can real-time reflect the use of memory.</li>
 </ol>
 <p>Version No： 1.0<br>Author： Kui Zhao Date： 2008-7 -15<br>Auditor： Mei Hong Date： 2008-7-25<br>Signature of leader：<br>Date： 2008-7-30</p>
+<h3 id="中文翻译："><a href="#中文翻译：" class="headerlink" title="中文翻译："></a>中文翻译：</h3><p>软件工程学院<br>本科课程大纲<br>课程ID 311006040课程名称操作系统<br>课程<br>属性<br>■强制□选修课程语言■英文■中文<br>信用小时4期64<br>学期□第一次秋季□初春□二秋■二春<br>□三秋□第三泉□第四秋□第四春<br>导师赵奎梁良胡晓琴<br>描述<br>本课程涵盖了操作系统和系统的基础知识<br>编程，揭示应用程序之间软件层的奥秘<br>程序和硬件，并涵盖处理的技术和算法<br>资源管理，共享和保护的棘手问题，以及<br>并发和复杂系统。也许最重要的是四个编程项目<br>让学生有机会实现一个小型的重要和现实的子系统<br>操作系统内核。<br>在讲座，阅读和编​​程任务之间，我们希望这个课程<br>将帮助学生成为不仅仅是操作系统专家和/或内核黑客，而且也是一个<br>更好的程序员和计算机系统用户，以及更好的计算机科学家<br>有洞察力来管理内部和内部的复杂和并发交互<br>硬件和软件系统！<br>先决条件<br>C语言编程<br>计算机体系结构<br>数据结构和算法</p>
+<p>教材William Stallings，操作系统内部和设计原则（第五版），发布<br>电子工业之家，2007年<br>2<br>资源<br>•课程网页：cs.scu.edu.cn/~zhaokui<br>所有重要信息将显示在课程网页上，包括讲座<br>笔记和编程作业。<br>•邮寄名单：zhaokui@cs.scu.edu.cn<br>lianggang@cs.scu.edu.cn<br>huxiaoqin@cs.scu.edu.cn<br>工作人员电子邮件是您应该在哪里发送有关课程的问题<br>管理和任何不适当的问题，如果发布<br>公开给新闻组（即包含你的代码或其他的问题）<br>私人信息）。<br>•参考：</p>
+<p>西安电子科技大学计算机操作系统tangziyin<br>技术出版社出版社，2004，第3版。<br>操作系统：设计和实现，Andrew S.Tanenbaum，Pulishing<br>电子工业之家，1998年版，第2版。<br>操作系统，Harvey M.Deitel，青海大学出版社，2007年3版。<br>操作系统概念，James L.Peterson，Addison-Wesley Publishing<br>公司，2001年，第6版。<br>操作系统概念，Abraham Silberschatz，Peter Galvin和Greg Gagne，<br>John Wiley and Sons，Higher Education Press，2002，Edition 6。<br>清华大学出版社，曾平，<br>2001，第1版</p>
+<p>教材William Stallings，操作系统内部和设计原理（第五版），<br>2007年电子工业出版社<br>2<br>资源<br>•课程网页：cs.scu.edu.cn/~zhaokui<br>所有重要信息将显示在课程网页上，包括讲座<br>笔记和编程作业。<br>•邮寄名单：zhaokui@cs.scu.edu.cn<br>lianggang@cs.scu.edu.cn<br>huxiaoqin@cs.scu.edu.cn<br>工作人员电子邮件是您应该在哪里发送有关课程<br>管理的问题和任何不恰当的问题如果<br>公开发布到新闻组（即包含您的代码或其他<br>私人信息的问题）。<br>•参考：</p>
+<ol>
+<li>西安电子科技大学计算机<br>操作系统tangziyin出版社，2004，第3版。</li>
+<li>操作系统：设计与实现，Andrew S.Tanenbaum，<br>电子工业制造所，1998年版，第2版。</li>
+<li>操作系统，Harvey M.Deitel，青海大学出版社，2007年3版。</li>
+<li>操作系统概念，James L.Peterson，Addison-Wesley Publishing<br>Company，2001，第6版。</li>
+<li>操作系统概念，Abraham Silberschatz，Peter Galvin和Greg Gagne，<br>John Wiley and Sons，Higher Education Press，2002，Edition 6。</li>
+<li>青岛大学出版社，<br>2001版，第1版</li>
+<li>Williamstallings.com/os/os5e.html</li>
+<li>Comp.os.research</li>
+<li>comp.os.misc</li>
+<li>comp.unix.internals</li>
+<li>comp.os.linux.development.system</li>
+<li><a href="http://ocw.zju.edu.cn/OcwWeb/index.jsp" target="_blank" rel="external">http://ocw.zju.edu.cn/OcwWeb/index.jsp</a><br>评分</li>
+</ol>
+<p>班级参与和作业（30％），期末考试（50％），课程实践（20）</p>
+<p>3<br>课程<br>（48学分<br>）<br>本课程的讲座将涵盖以下主题：</p>
+<ol>
+<li>计算机系统概述（1学时）<br>º。计算机体系结构和组织概况;<br>º计算机系统操作;<br>º中断;<br>º层次记忆;<br>ºI / O通信技术</li>
+<li>操作系统概述（3学分）<br>º操作系统历史;<br>º操作系统概念，目标和功能;<br>º介绍操作系统类型，包括多编程系统，<br>实时系统，批处理系统，分时系统，分布式操作系统，<br>网络操作系统<br>º现代操作系统结构概述;</li>
+<li>过程描述和控制（5学分）<br>º过程概念包括状态及其过渡，PCB;<br>º对过程和过程状态的操作;<br>º过程控制介绍;</li>
+<li>线程，SM和微内核（5学分）<br>º线程定义，创建，操作，用户和内核线程;<br>ºSMP的概念和SMP的管理;<br>ºMicrolekernels定义，客观;</li>
+<li>并发（9个小时）<br>º并发的概念和多个<br>并发进程的执行的含义;<br>º支持互斥的硬件机制;<br>º用于提供<br>并发的三种操作系统和编程语言机制;<br>º引入并发的两个问题：死锁和饥饿以及<br>这两个问题的解决方案。</li>
+<li>记忆（9个小时）<br>º记忆组织与管理;<br>4<br>º寻呼和分割，地址映射;<br>º虚拟内存概念;<br>º虚拟内存管理，页面替换算法。</li>
+<li>计划（9个小时）<br>º基本概念（包括长期调度，中期调度，<br>短期调度）。<br>º调度算法（包括先到先得（FCFS），优先级，<br>循环）;<br>º多处理器调度;<br>º实时调度;</li>
+<li>输入/输出设备（4个小时）<br>º与I / O设备的概念关系和I / O设备的分类;<br>ºI / O设备管理的任务和功能;<br>º数据结构和算法与I / O设备管理的关系;<br>º虚拟设备技术;</li>
+<li>文件管理（3个小时）<br>º文件概念，访问方法，目录结构，文件共享和保护<br>º文件系统结构，文件系统实现，目录实现，<br>分配方法，自由空间管理。<br>工具和<br>环境<br>Windows XP，Redhat linux 9.0，Vmware虚拟机，gcc，g ++<br>项目<br>（16学分<br>）<br>实验1：在<br>玉米片中开发shell 要求：<br>º设计具有以下属性的simples命令行shell：</li>
+<li>shell必须支持以下内部命令：cd，dir，clr，environ，<br>echo，help，pause and quit;</li>
+<li>所有其他命令行输入被解释为程序调用，应该<br>由shell执行程序调用并执行程序作为其自己的子<br>进程;</li>
+<li>shell必须能够从文件中获取其命令行输入;<br>五</li>
+<li>shell必须在stdin和/或stdout两者之一上支持i / o重定向;</li>
+<li>shell必须支持程序的后台执行。</li>
+<li>命令行提示必须包含当前目录的路径名。<br>º写一个简单的手册来描述如何使用shell。手册应该包含<br>足够的细节，让初学者使用linux来使用它;<br>º源代码必须进行广泛的评论和适当的结构，以<br>允许对等体了解并轻松维护代码;<br>º提交程序详情将在截止日期前提供;<br>º提交内容只能包含源代码文件，包含文件，makefile和<br>自述文件。<br>实验2：升级Nachos线程管理模型<br>要求：<br>修改Nachos的源代码，实现以下目标：<br>º扩展线程数据结构，并添加“用户ID”<br>线程ID“两个成员的数据结构的玉米片。同时，将这两个数据<br>成员的保护机制加入到现有的线程管理模型中;<br>º展开线程的现有状态。<br>玉米片中只有“新”，“准备好”，“封锁”和“跑”了四个州。请在玉米片中添加“暂停”状态。在<br>所谓的“挂机”是指存储在文档中，而当前线程的磁盘映像<br>比内存。“暂停”状态是未来<br>虚拟内存管理实现的重要基础。<br>º修改线程调度算法。将线程管理机制更改为<br>“抢先”。您可以<br>在Nachos线程管理模型中添加“定时”和“优先级调度”，“多队列” 等不同算法。<br>º添加全局线程管理机制，并<br>在Nachos中展开现有操作命令。例如，您可以添加一个名为“ThreadView”的<br>命令，以显示当前存在的所有线程的信息，包括屏幕上的<br>“用户ID”，“线程ID”，“当前状态”。<br>º设计互斥和同步示例。经过上述<br>修改，您可以设计一个程序来实现一个互斥和<br>同步的经典解决方案。例如，您可以选择“哲学家餐饮”<br>问题，并创建具有相同用户ID的五位哲学家线索，并遵循<br>“机制信号”来纠正程序中的操作。您也可以选择<br>“生产者 - 消费者”，<br>“塞维利亚睡眠理发师”等经典IPC问题6<br>完成此任务。<br>实验3：升级Nachos文件管理模型<br>要求：<br>修改Nachos的源代码以实现以下目标：<br>º在<br>Nachos内核中添加更多文档名称支持和以下描述的信息。<br>文件类型<br>创建时间<br>记录上次访问时间<br>文件路径<br>º根据文件大小实现动态内容分发。现在，Nachos根据<br>创建文件的指定大小分配空间，如果我们要<br>修改文件，我们仅限于分配的空间。所以，修改内核以满足<br>动态分布。<br>º修改Nachos中的文件索引，以实现无限长的文档。您<br>可以参考Unix的文件索引机制来实现这一要求。<br>º修改目录结构以实现多级目录，<br>对文件数量没有限制。<br>º实现文件系统的同步操作。目录文件，位图文件都是<br>关键资源，它们不允许多个进程同时访问。在<br>现行制度没有实行同步控制，因此，修改此缺陷。<br>实验4：升级Nachos内存管理模型<br>要求：<br>修改Nachos的源代码，实现以下目标：<br>º添加数据结构来描述内存的过程和相应的<br>关系。也就是说，将“进程ID”成员添加到内存描述结构中，<br>可以轻松<br>了解内存分配，便于测量内存管理的性能。<br>º实现多编程，<br>内存中共存有多个程序。<br>º修改Nachos以支持虚拟内存。玉米片只支持其<br>大小不超过内存大小的进程。如果进程的大小比内存的大小多<br>7<br>，那么它将不会执行。所以，修改这个缺陷来支持<br>大尺寸的过程。<br>º执行监控线程，可以实时反映内存的使用情况。</li>
+</ol>
+<p>版本号：1.0<br>作者：<br>崔<br>钊日期：2008-7-15 审计人<br>：梅红日期：2008-7-25 领导签名：日期：2008-7-30</p>
 ]]></content>
     
     <summary type="html">
@@ -160,7 +230,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生数据结构大纲/</id>
     <published>2017-05-17T01:26:37.000Z</published>
-    <updated>2017-05-17T01:29:02.354Z</updated>
+    <updated>2017-05-17T01:36:34.196Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311036030 Course Name Data Structures &amp; Algorithm<br>Course<br>Attribute<br>□Compulsory □Selective Course Language □English █Chinese<br>Credit Hour 3 Period 48<br>Semester □First Fall □First Spring █Second Fall □Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Li xiaohua，Zuo hang，Sun Jieping, Zhu Hong<br>Description<br>This course thoroughly covers key data structures at the undergraduate<br>level. With a focus on how to assess costs and benefits, it teaches students<br>how to create efficient data structures and algorithms and how to adopt<br>to new design challenges. Students are taught how to assess applications<br>needs to find data structures with matching capabilities.</p>
 <p>Prerequisites C Language Programming<br>Discrete Mathematics</p>
@@ -179,6 +249,23 @@
 <li>Graphs. 9h<br>Terminology and Representations. Graph Implementations. Graph Traversals. Shortest-Paths<br>Problems. Minimum-Cost Spanning Trees.<br>3<br>Total:<br>Lecture: 47 QA: 1<br>Tools &amp;<br>Environment<br>This course will require to use VC++ 6.0 software for programming<br>Projects<br>Project: City database Management System<br>Requirements:<br>1） Using BST or linked lis t to store the records；<br>2） Each node should contain the name of city and the coordination of city(denoted using x,y)；<br>3） Organize the node in database according to the name of city<br>4） Insert single or multiple nodes, delete or index node in accordance with name or coordination.<br>5） Print all records which have certain distance with a given city<br>6） Statistic the runtime of each operation<br>7) encourage adding in innovate functions<br>Development environment:<br>VC++ 6.0</li>
 </ol>
 <p>Version No： 1.0<br>Author： Xiaohua Li Date： 2008-7 -15<br>Auditor： Mei Hong Date： 2008-7-25<br>Signature of leader：<br>Date： 2008-7-30</p>
+<h3 id="中文翻译："><a href="#中文翻译：" class="headerlink" title="中文翻译："></a>中文翻译：</h3><p><strong>软件工程学院</strong><br><strong>本科课程大纲</strong><br>课程编号311036030课程名称数据结构与算法<br>课程<br>属性<br>□强制□选修课程语言□英语█中文<br>信用时间3期48<br>学期□第一次秋季□第一次春季█第二次秋季□二春<br>□ 三季□第三弹□第四秋季□第四弹簧<br>导师李晓华，佐恒，孙吴阶平，朱虹<br>介绍<br>本课程涵盖彻底在本科关键数据结构<br>水平。重点关注如何评估成本和收益，它教会学生<br>如何创建高效的数据结构和算法，以及如何<br>应对新的设计挑战。</p>
+<p>前提条件C语言编程<br>离散数学</p>
+<p>教科书数据结构和算法分析的实践介绍，Clifford A.Shaffer<br>，Prentice Hall 2001.第二版<br>资源<br>①A.V.Aho，JEHopcroft和JDUllman，数据结构和算法，Addison - Wesley<br>Publishing Company，Inc.，1983<br>②Cliford A. Shaffer，数据结构与算法分析实践介绍 -<br>C ++）电子工业出版社。<br>分级任务，班级参与（40％），期末考试（60％）<br>专题</p>
+<ol>
+<li>数据结构和算法。1h<br>数据结构的哲学。抽象数据类型和数据结构。问题，算法<br>和程序。</li>
+<li>数学初步 2h<br>2<br>ets和关系。杂项符号 对数。递归。总结和反复。<br>数学证明技术。估计。</li>
+<li>算法分析。2h<br>简介 最佳，最差和平均的案例。更快的计算机，还是更快的算法？<br>渐近分析。计算程序的运行时间。分析问题 常见的<br>误解。多个参数。空间界限 一些实际注意事项</li>
+<li>列表，堆栈和队列。10h<br>列表。词典ADT。堆栈。队列。</li>
+<li>二叉树。6h<br>定义和属性。二叉树遍历。二叉树节点实现。二进制<br>搜索树。堆和优先队列。霍夫曼编码树。</li>
+<li>非二叉树。4h<br>通用树定义和术语。父指针实现。一般树的<br>实现。Kary树。顺序树实现。</li>
+<li>内部排序 5h<br>排序术语和符号。三… Q（n2<br>）排序算法。外壳排序。快速排序<br>合并排序 堆排序 Bin排序和基数排序。排序算法的实证比较。<br>下限排序。</li>
+<li>文件处理和外部排序。2h<br>主要与次要存储。磁盘驱动器 缓冲池和缓冲池。程序员的<br>文件视图。外部排序。外部排序的简单方法。更换选择<br>多路合并</li>
+<li>搜索。3h<br>搜索排序数组。自组织名单 搜索集合。散列。</li>
+<li>索引。3h<br>线性索引。ISAM。树索引。2-3棵树。B-树。</li>
+<li>图表。9h<br>术语和表示。图表实现。图形遍历。最短路径<br>问题。最小成本生成树。<br>3<br>总计：<br>讲座：47 QA：1<br>工具与<br>环境<br>本课程将需要使用VC ++ 6.0软件编程<br>项目<br>项目：城市数据库管理系统<br>要求：<br>1）使用BST或链接存储记录;<br>2）每个节点应包含城市的名称和城市的协调（用x，y表示）;<br>3）根据城市的名称组织数据库中的节点<br>4）根据名称或协调插入单个或多个节点，删除或索引节点。</li>
+</ol>
+<p>版本号：1.0<br>作者：李晓华<br>日期：2008-7-15<br>审计人<br>：梅红日期：2008-7-25 领导签名：日期：2008-7-30</p>
 ]]></content>
     
     <summary type="html">
