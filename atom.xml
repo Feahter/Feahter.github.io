@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2017-08-07T09:38:27.831Z</updated>
+  <updated>2017-08-07T09:47:18.253Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://feahter.github.io/2017/08/07/Laravel-Vue-element-UI-Sass-gulp-webpack%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"/>
     <id>https://feahter.github.io/2017/08/07/Laravel-Vue-element-UI-Sass-gulp-webpack相关配置/</id>
     <published>2017-08-07T08:56:11.000Z</published>
-    <updated>2017-08-07T09:38:27.831Z</updated>
+    <updated>2017-08-07T09:47:18.253Z</updated>
     
     <content type="html"><![CDATA[<p>1.首先安装composer，php的包管理器。<br>地址：<a href="https://getcomposer.org/download/" target="_blank" rel="external">https://getcomposer.org/download/</a></p>
 <p>2.然后跳转至本地虚拟环境，打开命令行利用composer安装Laravel项目：(laravelapp为项目名称)</p>
@@ -59,7 +59,11 @@
       <category term="术" scheme="https://feahter.github.io/categories/%E6%9C%AF/"/>
     
     
-      <category term="项目配置、Laravel、Vue" scheme="https://feahter.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E3%80%81Laravel%E3%80%81Vue/"/>
+      <category term="项目配置" scheme="https://feahter.github.io/tags/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="Laravel" scheme="https://feahter.github.io/tags/Laravel/"/>
+    
+      <category term="Vue" scheme="https://feahter.github.io/tags/Vue/"/>
     
   </entry>
   
