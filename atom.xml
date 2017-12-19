@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2017-08-10T01:47:53.448Z</updated>
+  <updated>2017-08-10T01:47:53.449Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://feahter.github.io/2017/08/07/%E5%85%B3%E4%BA%8Eremetajs/"/>
     <id>https://feahter.github.io/2017/08/07/关于remetajs/</id>
     <published>2017-08-07T08:56:11.000Z</published>
-    <updated>2017-08-10T01:47:53.448Z</updated>
+    <updated>2017-08-10T01:47:53.449Z</updated>
     
     <content type="html"><![CDATA[<h2 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h2><p>remeta.js主要由两部分构成，hitdpr()和remeta()。</p>
 <h3 id="1-hitdpr"><a href="#1-hitdpr" class="headerlink" title="1.hitdpr"></a>1.hitdpr</h3><p>给根节点打上dpr标记，区分高倍屏，方便图片资源替换。</p>
@@ -164,7 +164,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生计算机网络大纲/</id>
     <published>2017-05-17T01:27:19.000Z</published>
-    <updated>2017-05-17T01:41:36.568Z</updated>
+    <updated>2017-05-17T01:41:36.569Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311015040 Course Name Computer Networks<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English □Chinese<br>Credit Hour 4 Period 80<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors YANG Pin, RUAN Shuhua, LIN Feng<br>Description<br>This course provides an introduction to fundamental concepts in the design and implementation of<br>computer communication networks, their protocols, and applications. Topics to be covered<br>include: overview of network architectures, applications, network programming interfaces (e.g.,<br>sockets), transport, congestion, routing, and data link protocols, addressing, local area networks,<br>wireless networks, network security, and network management. Examples will be drawn primarily<br>from the Internet (e.g., TCP, UDP, and IP) protocol suite.<br>Prerequisites<br>C Language Programming<br>Data Structures &amp; Algorithm<br>Operating System<br>Textbook Computer Networking: A Top Down Approach Featuring the Internet (3rd ed.), J.F. Kurose and<br>K.W. Ross, Addison-Wesley Longman.<br>Resource</p>
 <ol>
@@ -218,7 +218,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生操作系统大纲/</id>
     <published>2017-05-17T01:27:01.000Z</published>
-    <updated>2017-05-17T01:47:43.603Z</updated>
+    <updated>2017-05-17T01:47:43.604Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311006040 Course Name Operating System<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English ■Chinese<br>Credit Hour 4 Period 64<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Zhao Kui, Liang Gang, Hu Xiao-qin<br>Description<br>This course covers the fundamentals of Operating Systems and Systems<br>Programming, revealing the mysteries of the software layer between application<br>programs and hardware, and covering techniques and algorithms for dealing with<br>thorny problems of resource management, sharing, and protection, as well as<br>concurrency and complex systems. Perhaps best of all, four programming projects<br>give students the chance to implement important and realistic subsystems of a small<br>operating system kernel.<br>Between the lectures, reading, and programming assignments, we hope that the course<br>will help students become not only an OS expert and/or kernel hacker, but also a<br>better programmer and user of computer systems, and a better computer scientist who<br>has insight into managing complex and concurrent interactions within and between<br>hardware and software systems!<br>Prerequisites<br>C Language Programming<br>Computer Architecture<br>Data Structures and Algorithms</p>
 <p>Textbook William Stallings, Operating Systems Internals and Design Principles (Fifth Edition),Publish<br>House of Electronics Industry,2007<br>2<br>Resource<br>• Course Webpage: cs.scu.edu.cn/~zhaokui<br>All vital information will appear on the course webpage, including lecture<br>notes and programming assignments.<br>• Mailing list: zhaokui@cs.scu.edu.cn<br> lianggang@cs.scu.edu.cn<br> huxiaoqin@cs.scu.edu.cn<br>The staff email is where you should send questions regarding course<br>administration and any questions which would be inappropriate if posted<br>publicly to the newsgroup (i.e. questions that contain your code or other<br>private information).<br>• Reference:</p>
@@ -374,7 +374,7 @@
     <link href="https://feahter.github.io/2017/05/12/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%87%8D%E7%82%B9/"/>
     <id>https://feahter.github.io/2017/05/12/研究生数据结构重点/</id>
     <published>2017-05-12T06:33:53.000Z</published>
-    <updated>2017-05-12T07:21:02.438Z</updated>
+    <updated>2017-05-12T07:21:02.439Z</updated>
     
     <content type="html"><![CDATA[<p>一、线性表</p>
 <p>链表插入、删除节点时的指针操作（选择题）；</p>
@@ -1258,7 +1258,7 @@
     <link href="https://feahter.github.io/2016/11/28/%E5%9F%BA%E4%BA%8EBootstrap%E7%9A%84%E8%87%AA%E9%80%82%E5%BA%94%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88/"/>
     <id>https://feahter.github.io/2016/11/28/基于Bootstrap的自适应实施方案/</id>
     <published>2016-11-28T03:31:18.000Z</published>
-    <updated>2016-12-08T03:19:33.371Z</updated>
+    <updated>2016-12-08T03:19:33.372Z</updated>
     
     <content type="html"><![CDATA[<h4 id="名由"><a href="#名由" class="headerlink" title="名由"></a>名由</h4><p>bootstrap:意为引导，引导有杠杆的作用。在计算机用语中为引导程序的意思。</p>
 <p>很多人会对Bootstrap这个名字感到困惑。英语Bootstrap的意思是靴带，来自短语：“pull oneself up by one′s bootstrap”，18世纪德国文学家拉斯伯（Rudolf Erich Raspe）的小说《巴龙历险记（或译为终极天将）》（Adventures of Baron Munchausen) 记述道：“巴龙掉到湖里沉到湖底，在他绝望的时候，他用自己靴子上的带子把自己拉了上来。”现意指不借助别人的力量，凭自己的努力，终于获得成功。统计学里“bootstrap”法是指用原样本自身的数据抽样得出新的样本及统计量，根据其意现在普遍将其译为“自助法”。</p>
