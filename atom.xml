@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://feahter.github.io/"/>
-  <updated>2017-08-07T09:47:18.253Z</updated>
+  <updated>2017-08-10T01:47:54.000Z</updated>
   <id>https://feahter.github.io/</id>
   
   <author>
@@ -16,11 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于remetajs</title>
+    <link href="https://feahter.github.io/2017/08/07/%E5%85%B3%E4%BA%8Eremetajs/"/>
+    <id>https://feahter.github.io/2017/08/07/关于remetajs/</id>
+    <published>2017-08-07T08:56:11.000Z</published>
+    <updated>2017-08-10T01:47:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h2><p>remeta.js主要由两部分构成，hitdpr()和remeta()。</p>
+<h3 id="1-hitdpr"><a href="#1-hitdpr" class="headerlink" title="1.hitdpr"></a>1.hitdpr</h3><p>给根节点打上dpr标记，区分高倍屏，方便图片资源替换。</p>
+<h3 id="2-remeta"><a href="#2-remeta" class="headerlink" title="2.remeta"></a>2.remeta</h3><p>通关设置目标参数集中适配同一版css，可直接使用px，而无需计算em或是rem。</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>适用所有情况下的关于屏幕适配的问题，跨屏自适应，兼容ie8+，减轻媒体查询工作。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * @Author: feahter</div><div class="line"> * @Date:   2017-08-02 15:38:47</div><div class="line"> * @Last Modified by:   feahter</div><div class="line"> * @Last Modified time: 2017-08-03 11:57:31</div><div class="line"> */</div><div class="line"><span class="meta"></span></div><div class="line">'use strict';</div><div class="line"></div><div class="line">! <span class="function"><span class="keyword">function</span>(<span class="params">w, d</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> _width = w.screen.availWidth;</div><div class="line">    <span class="keyword">var</span> dpr = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">hitdpr</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> isAndroid = w.navigator.appVersion.match(<span class="regexp">/android/gi</span>);</div><div class="line">        <span class="keyword">var</span> isIPhone = w.navigator.appVersion.match(<span class="regexp">/iphone/gi</span>);</div><div class="line">        <span class="keyword">var</span> devicePixelRatio = w.devicePixelRatio;</div><div class="line">        <span class="keyword">if</span> (isIPhone) &#123;</div><div class="line">            <span class="comment">// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span></div><div class="line">            <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">3</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">3</span>)) &#123;</div><div class="line">                dpr = <span class="number">3</span>;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">2</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">2</span>)) &#123;</div><div class="line">                dpr = <span class="number">2</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                dpr = <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            devicePixelRatio ? dpr = devicePixelRatio : dpr = <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        d.documentElement.setAttribute(<span class="string">'data-dpr'</span>, dpr);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">remeta</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> _meta = d.querySelector(<span class="string">'meta[name="viewport"]'</span>);</div><div class="line">        <span class="keyword">var</span> scale = _width / target;</div><div class="line">        <span class="keyword">if</span> (scale &gt; <span class="number">1</span>) &#123; scale = <span class="number">1</span>; &#125;</div><div class="line">        <span class="keyword">var</span> oString = <span class="string">"width=device-width, initial-scale="</span> + scale + <span class="string">", maximum-scale="</span> + scale + <span class="string">", user-scalable=no"</span>;</div><div class="line">        <span class="keyword">if</span> (!_meta) &#123;</div><div class="line">            _meta = d.createElement(<span class="string">'meta'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'name'</span>, <span class="string">'viewport'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">            <span class="keyword">if</span> (_meta.firstElementChild) &#123;</div><div class="line">                _meta.firstElementChild.appendChild(_meta);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">var</span> wrap = d.createElement(<span class="string">'div'</span>);</div><div class="line">                wrap.appendChild(_meta);</div><div class="line">                <span class="built_in">document</span>.write(wrap.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 页面加载调用</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (_width &lt;= <span class="number">414</span>) &#123;</div><div class="line">            remeta(<span class="number">414</span>);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">414</span> &amp;&amp; _width &lt;= <span class="number">768</span>) &#123;</div><div class="line">            remeta(<span class="number">768</span>);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">            remeta(<span class="number">1280</span>);</div><div class="line">        &#125;</div><div class="line">        hitdpr();</div><div class="line">    &#125;)();</div><div class="line">    <span class="comment">//用户变化屏幕方向时调用</span></div><div class="line">    w.addEventListener(<span class="string">'orientationchange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (_width &gt;= <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">            location.reload();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</div></pre></td></tr></table></figure>
+<h3 id="1-hitdpr-1"><a href="#1-hitdpr-1" class="headerlink" title="1.hitdpr()"></a>1.hitdpr()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hitdpr</span>(<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="keyword">var</span> isAndroid = w.navigator.appVersion.match(<span class="regexp">/android/gi</span>);</div><div class="line">       <span class="keyword">var</span> isIPhone = w.navigator.appVersion.match(<span class="regexp">/iphone/gi</span>);</div><div class="line">       <span class="keyword">var</span> devicePixelRatio = w.devicePixelRatio;</div><div class="line">       <span class="keyword">if</span> (isIPhone) &#123;</div><div class="line">           <span class="comment">// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span></div><div class="line">           <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">3</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">3</span>)) &#123;</div><div class="line">               dpr = <span class="number">3</span>;</div><div class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">2</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">2</span>)) &#123;</div><div class="line">               dpr = <span class="number">2</span>;</div><div class="line">           &#125; <span class="keyword">else</span> &#123;</div><div class="line">               dpr = <span class="number">1</span>;</div><div class="line">           &#125;</div><div class="line">       &#125; <span class="keyword">else</span> &#123;</div><div class="line">           devicePixelRatio ? dpr = devicePixelRatio : dpr = <span class="number">1</span>;</div><div class="line">       &#125;</div><div class="line">       d.documentElement.setAttribute(<span class="string">'data-dpr'</span>, dpr);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>通过window对象的devicePixelRatio属性获取dpr，正则匹配判断区分设备系统类型，给根节点打上标记。</p>
+<h3 id="2-remta"><a href="#2-remta" class="headerlink" title="2.remta()"></a>2.remta()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remeta</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> _meta = d.querySelector(<span class="string">'meta[name="viewport"]'</span>);</div><div class="line">        <span class="keyword">var</span> scale = _width / target;</div><div class="line">        <span class="keyword">if</span> (scale &gt; <span class="number">1</span>) &#123; scale = <span class="number">1</span>; &#125;</div><div class="line">        <span class="keyword">var</span> oString = <span class="string">"width=device-width, initial-scale="</span> + scale + <span class="string">", maximum-scale="</span> + scale + <span class="string">", user-scalable=no"</span>;</div><div class="line">        <span class="keyword">if</span> (!_meta) &#123;</div><div class="line">            _meta = d.createElement(<span class="string">'meta'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'name'</span>, <span class="string">'viewport'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">            <span class="keyword">if</span> (_meta.firstElementChild) &#123;</div><div class="line">                _meta.firstElementChild.appendChild(_meta);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">var</span> wrap = d.createElement(<span class="string">'div'</span>);</div><div class="line">                wrap.appendChild(_meta);</div><div class="line">                <span class="built_in">document</span>.write(wrap.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<p>获取当前设备的真实宽度，设置目标target参数，通过创建或改写name为viewport的meta标签参数达到缩放目的。</p>
+<h3 id="3-调用"><a href="#3-调用" class="headerlink" title="3.调用"></a>3.调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 页面加载调用</span></div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (_width &lt;= <span class="number">414</span>) &#123;</div><div class="line">          remeta(<span class="number">414</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">414</span> &amp;&amp; _width &lt;= <span class="number">768</span>) &#123;</div><div class="line">          remeta(<span class="number">768</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">          remeta(<span class="number">1280</span>);</div><div class="line">      &#125;</div><div class="line">      hitdpr();</div><div class="line">  &#125;)();</div><div class="line">  <span class="comment">//用户变化屏幕方向时调用</span></div><div class="line">  w.addEventListener(<span class="string">'orientationchange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (_width &gt;= <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">          location.reload();</div><div class="line">      &#125;</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
+<p>通过判断参数调用remeta(target)实现集中兼容，小于逻辑宽度为414的均集中缩放至414的显示效果，通过监听orientationchange事件刷新横竖屏变化事件。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;构成&quot;&gt;&lt;a href=&quot;#构成&quot; class=&quot;headerlink&quot; title=&quot;构成&quot;&gt;&lt;/a&gt;构成&lt;/h2&gt;&lt;p&gt;remeta.js主要由两部分构成，hitdpr()和remeta()。&lt;/p&gt;
+&lt;h3 id=&quot;1-hitdpr&quot;&gt;&lt;a href=&quot;#1
+    
+    </summary>
+    
+      <category term="术" scheme="https://feahter.github.io/categories/%E6%9C%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="https://feahter.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Laravel+Vue+element UI+Sass+gulp+webpack相关配置</title>
     <link href="https://feahter.github.io/2017/08/07/Laravel-Vue-element-UI-Sass-gulp-webpack%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"/>
     <id>https://feahter.github.io/2017/08/07/Laravel-Vue-element-UI-Sass-gulp-webpack相关配置/</id>
     <published>2017-08-07T08:56:11.000Z</published>
-    <updated>2017-08-07T09:47:18.253Z</updated>
+    <updated>2017-08-07T09:47:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>1.首先安装composer，php的包管理器。<br>地址：<a href="https://getcomposer.org/download/" target="_blank" rel="external">https://getcomposer.org/download/</a></p>
 <p>2.然后跳转至本地虚拟环境，打开命令行利用composer安装Laravel项目：(laravelapp为项目名称)</p>
@@ -68,45 +102,11 @@
   </entry>
   
   <entry>
-    <title>关于remetajs</title>
-    <link href="https://feahter.github.io/2017/08/07/%E5%85%B3%E4%BA%8Eremetajs/"/>
-    <id>https://feahter.github.io/2017/08/07/关于remetajs/</id>
-    <published>2017-08-07T08:56:11.000Z</published>
-    <updated>2017-08-10T01:47:53.449Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h2><p>remeta.js主要由两部分构成，hitdpr()和remeta()。</p>
-<h3 id="1-hitdpr"><a href="#1-hitdpr" class="headerlink" title="1.hitdpr"></a>1.hitdpr</h3><p>给根节点打上dpr标记，区分高倍屏，方便图片资源替换。</p>
-<h3 id="2-remeta"><a href="#2-remeta" class="headerlink" title="2.remeta"></a>2.remeta</h3><p>通关设置目标参数集中适配同一版css，可直接使用px，而无需计算em或是rem。</p>
-<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>适用所有情况下的关于屏幕适配的问题，跨屏自适应，兼容ie8+，减轻媒体查询工作。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * @Author: feahter</div><div class="line"> * @Date:   2017-08-02 15:38:47</div><div class="line"> * @Last Modified by:   feahter</div><div class="line"> * @Last Modified time: 2017-08-03 11:57:31</div><div class="line"> */</div><div class="line"><span class="meta"></span></div><div class="line">'use strict';</div><div class="line"></div><div class="line">! <span class="function"><span class="keyword">function</span>(<span class="params">w, d</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> _width = w.screen.availWidth;</div><div class="line">    <span class="keyword">var</span> dpr = <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">hitdpr</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> isAndroid = w.navigator.appVersion.match(<span class="regexp">/android/gi</span>);</div><div class="line">        <span class="keyword">var</span> isIPhone = w.navigator.appVersion.match(<span class="regexp">/iphone/gi</span>);</div><div class="line">        <span class="keyword">var</span> devicePixelRatio = w.devicePixelRatio;</div><div class="line">        <span class="keyword">if</span> (isIPhone) &#123;</div><div class="line">            <span class="comment">// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span></div><div class="line">            <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">3</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">3</span>)) &#123;</div><div class="line">                dpr = <span class="number">3</span>;</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">2</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">2</span>)) &#123;</div><div class="line">                dpr = <span class="number">2</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                dpr = <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            devicePixelRatio ? dpr = devicePixelRatio : dpr = <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        d.documentElement.setAttribute(<span class="string">'data-dpr'</span>, dpr);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">remeta</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> _meta = d.querySelector(<span class="string">'meta[name="viewport"]'</span>);</div><div class="line">        <span class="keyword">var</span> scale = _width / target;</div><div class="line">        <span class="keyword">if</span> (scale &gt; <span class="number">1</span>) &#123; scale = <span class="number">1</span>; &#125;</div><div class="line">        <span class="keyword">var</span> oString = <span class="string">"width=device-width, initial-scale="</span> + scale + <span class="string">", maximum-scale="</span> + scale + <span class="string">", user-scalable=no"</span>;</div><div class="line">        <span class="keyword">if</span> (!_meta) &#123;</div><div class="line">            _meta = d.createElement(<span class="string">'meta'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'name'</span>, <span class="string">'viewport'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">            <span class="keyword">if</span> (_meta.firstElementChild) &#123;</div><div class="line">                _meta.firstElementChild.appendChild(_meta);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">var</span> wrap = d.createElement(<span class="string">'div'</span>);</div><div class="line">                wrap.appendChild(_meta);</div><div class="line">                <span class="built_in">document</span>.write(wrap.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    <span class="comment">// 页面加载调用</span></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (_width &lt;= <span class="number">414</span>) &#123;</div><div class="line">            remeta(<span class="number">414</span>);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">414</span> &amp;&amp; _width &lt;= <span class="number">768</span>) &#123;</div><div class="line">            remeta(<span class="number">768</span>);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">            remeta(<span class="number">1280</span>);</div><div class="line">        &#125;</div><div class="line">        hitdpr();</div><div class="line">    &#125;)();</div><div class="line">    <span class="comment">//用户变化屏幕方向时调用</span></div><div class="line">    w.addEventListener(<span class="string">'orientationchange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (_width &gt;= <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">            location.reload();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</div></pre></td></tr></table></figure>
-<h3 id="1-hitdpr-1"><a href="#1-hitdpr-1" class="headerlink" title="1.hitdpr()"></a>1.hitdpr()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hitdpr</span>(<span class="params"></span>) </span>&#123;</div><div class="line">       <span class="keyword">var</span> isAndroid = w.navigator.appVersion.match(<span class="regexp">/android/gi</span>);</div><div class="line">       <span class="keyword">var</span> isIPhone = w.navigator.appVersion.match(<span class="regexp">/iphone/gi</span>);</div><div class="line">       <span class="keyword">var</span> devicePixelRatio = w.devicePixelRatio;</div><div class="line">       <span class="keyword">if</span> (isIPhone) &#123;</div><div class="line">           <span class="comment">// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案</span></div><div class="line">           <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">3</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">3</span>)) &#123;</div><div class="line">               dpr = <span class="number">3</span>;</div><div class="line">           &#125; <span class="keyword">else</span> <span class="keyword">if</span> (devicePixelRatio &gt;= <span class="number">2</span> &amp;&amp; (!dpr || dpr &gt;= <span class="number">2</span>)) &#123;</div><div class="line">               dpr = <span class="number">2</span>;</div><div class="line">           &#125; <span class="keyword">else</span> &#123;</div><div class="line">               dpr = <span class="number">1</span>;</div><div class="line">           &#125;</div><div class="line">       &#125; <span class="keyword">else</span> &#123;</div><div class="line">           devicePixelRatio ? dpr = devicePixelRatio : dpr = <span class="number">1</span>;</div><div class="line">       &#125;</div><div class="line">       d.documentElement.setAttribute(<span class="string">'data-dpr'</span>, dpr);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-<p>通过window对象的devicePixelRatio属性获取dpr，正则匹配判断区分设备系统类型，给根节点打上标记。</p>
-<h3 id="2-remta"><a href="#2-remta" class="headerlink" title="2.remta()"></a>2.remta()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remeta</span>(<span class="params">target</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> _meta = d.querySelector(<span class="string">'meta[name="viewport"]'</span>);</div><div class="line">        <span class="keyword">var</span> scale = _width / target;</div><div class="line">        <span class="keyword">if</span> (scale &gt; <span class="number">1</span>) &#123; scale = <span class="number">1</span>; &#125;</div><div class="line">        <span class="keyword">var</span> oString = <span class="string">"width=device-width, initial-scale="</span> + scale + <span class="string">", maximum-scale="</span> + scale + <span class="string">", user-scalable=no"</span>;</div><div class="line">        <span class="keyword">if</span> (!_meta) &#123;</div><div class="line">            _meta = d.createElement(<span class="string">'meta'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'name'</span>, <span class="string">'viewport'</span>);</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">            <span class="keyword">if</span> (_meta.firstElementChild) &#123;</div><div class="line">                _meta.firstElementChild.appendChild(_meta);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">var</span> wrap = d.createElement(<span class="string">'div'</span>);</div><div class="line">                wrap.appendChild(_meta);</div><div class="line">                <span class="built_in">document</span>.write(wrap.innerHTML);</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            _meta.setAttribute(<span class="string">'content'</span>, oString);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
-<p>获取当前设备的真实宽度，设置目标target参数，通过创建或改写name为viewport的meta标签参数达到缩放目的。</p>
-<h3 id="3-调用"><a href="#3-调用" class="headerlink" title="3.调用"></a>3.调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 页面加载调用</span></div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (_width &lt;= <span class="number">414</span>) &#123;</div><div class="line">          remeta(<span class="number">414</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">414</span> &amp;&amp; _width &lt;= <span class="number">768</span>) &#123;</div><div class="line">          remeta(<span class="number">768</span>);</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (_width &gt; <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">          remeta(<span class="number">1280</span>);</div><div class="line">      &#125;</div><div class="line">      hitdpr();</div><div class="line">  &#125;)();</div><div class="line">  <span class="comment">//用户变化屏幕方向时调用</span></div><div class="line">  w.addEventListener(<span class="string">'orientationchange'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (_width &gt;= <span class="number">768</span> &amp;&amp; _width &lt;= <span class="number">1200</span>) &#123;</div><div class="line">          location.reload();</div><div class="line">      &#125;</div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-<p>通过判断参数调用remeta(target)实现集中兼容，小于逻辑宽度为414的均集中缩放至414的显示效果，通过监听orientationchange事件刷新横竖屏变化事件。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;构成&quot;&gt;&lt;a href=&quot;#构成&quot; class=&quot;headerlink&quot; title=&quot;构成&quot;&gt;&lt;/a&gt;构成&lt;/h2&gt;&lt;p&gt;remeta.js主要由两部分构成，hitdpr()和remeta()。&lt;/p&gt;
-&lt;h3 id=&quot;1-hitdpr&quot;&gt;&lt;a href=&quot;#1
-    
-    </summary>
-    
-      <category term="术" scheme="https://feahter.github.io/categories/%E6%9C%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="https://feahter.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>研究生算法设计大纲</title>
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生算法设计大纲/</id>
     <published>2017-05-17T01:27:31.000Z</published>
-    <updated>2017-05-17T01:42:38.987Z</updated>
+    <updated>2017-05-17T01:42:40.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311036030 Course Name Data Structures &amp; Algorithm<br>Course<br>Attribute<br>□Compulsory □Selective Course Language □English █Chinese<br>Credit Hour 3 Period 48<br>Semester □First Fall □First Spring █Second Fall □Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Li xiaohua，Zuo hang，Sun Jieping, Zhu Hong<br>Description<br>This course thoroughly covers key data structures at the undergraduate<br>level. With a focus on how to assess costs and benefits, it teaches students<br>how to create efficient data structures and algorithms and how to adopt<br>to new design challenges. Students are taught how to assess applications<br>needs to find data structures with matching capabilities.</p>
 <p>Prerequisites C Language Programming<br>Discrete Mathematics</p>
@@ -164,7 +164,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生计算机网络大纲/</id>
     <published>2017-05-17T01:27:19.000Z</published>
-    <updated>2017-05-17T01:41:36.569Z</updated>
+    <updated>2017-05-17T01:41:38.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311015040 Course Name Computer Networks<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English □Chinese<br>Credit Hour 4 Period 80<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors YANG Pin, RUAN Shuhua, LIN Feng<br>Description<br>This course provides an introduction to fundamental concepts in the design and implementation of<br>computer communication networks, their protocols, and applications. Topics to be covered<br>include: overview of network architectures, applications, network programming interfaces (e.g.,<br>sockets), transport, congestion, routing, and data link protocols, addressing, local area networks,<br>wireless networks, network security, and network management. Examples will be drawn primarily<br>from the Internet (e.g., TCP, UDP, and IP) protocol suite.<br>Prerequisites<br>C Language Programming<br>Data Structures &amp; Algorithm<br>Operating System<br>Textbook Computer Networking: A Top Down Approach Featuring the Internet (3rd ed.), J.F. Kurose and<br>K.W. Ross, Addison-Wesley Longman.<br>Resource</p>
 <ol>
@@ -218,7 +218,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生操作系统大纲/</id>
     <published>2017-05-17T01:27:01.000Z</published>
-    <updated>2017-05-17T01:47:43.604Z</updated>
+    <updated>2017-05-17T01:47:44.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311006040 Course Name Operating System<br>Course<br>Attribute<br>■Compulsory □Selective Course Language ■English ■Chinese<br>Credit Hour 4 Period 64<br>Semester □First Fall □First Spring □Second Fall ■Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Zhao Kui, Liang Gang, Hu Xiao-qin<br>Description<br>This course covers the fundamentals of Operating Systems and Systems<br>Programming, revealing the mysteries of the software layer between application<br>programs and hardware, and covering techniques and algorithms for dealing with<br>thorny problems of resource management, sharing, and protection, as well as<br>concurrency and complex systems. Perhaps best of all, four programming projects<br>give students the chance to implement important and realistic subsystems of a small<br>operating system kernel.<br>Between the lectures, reading, and programming assignments, we hope that the course<br>will help students become not only an OS expert and/or kernel hacker, but also a<br>better programmer and user of computer systems, and a better computer scientist who<br>has insight into managing complex and concurrent interactions within and between<br>hardware and software systems!<br>Prerequisites<br>C Language Programming<br>Computer Architecture<br>Data Structures and Algorithms</p>
 <p>Textbook William Stallings, Operating Systems Internals and Design Principles (Fifth Edition),Publish<br>House of Electronics Industry,2007<br>2<br>Resource<br>• Course Webpage: cs.scu.edu.cn/~zhaokui<br>All vital information will appear on the course webpage, including lecture<br>notes and programming assignments.<br>• Mailing list: zhaokui@cs.scu.edu.cn<br> lianggang@cs.scu.edu.cn<br> huxiaoqin@cs.scu.edu.cn<br>The staff email is where you should send questions regarding course<br>administration and any questions which would be inappropriate if posted<br>publicly to the newsgroup (i.e. questions that contain your code or other<br>private information).<br>• Reference:</p>
@@ -305,9 +305,9 @@
       <category term="学" scheme="https://feahter.github.io/categories/%E5%AD%A6/"/>
     
     
-      <category term="操作系统" scheme="https://feahter.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="考研" scheme="https://feahter.github.io/tags/%E8%80%83%E7%A0%94/"/>
+    
+      <category term="操作系统" scheme="https://feahter.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -316,7 +316,7 @@
     <link href="https://feahter.github.io/2017/05/17/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%A7%E7%BA%B2/"/>
     <id>https://feahter.github.io/2017/05/17/研究生数据结构大纲/</id>
     <published>2017-05-17T01:26:37.000Z</published>
-    <updated>2017-05-17T01:36:34.196Z</updated>
+    <updated>2017-05-17T01:36:36.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>College of Software Engineering</strong><br><strong>Undergraduate Course Syllabus</strong><br>Course ID 311036030 Course Name Data Structures &amp; Algorithm<br>Course<br>Attribute<br>□Compulsory □Selective Course Language □English █Chinese<br>Credit Hour 3 Period 48<br>Semester □First Fall □First Spring █Second Fall □Second Spring<br>□Third Fall □Third Spring □Fourth Fall □Fourth Spring<br>Instructors Li xiaohua，Zuo hang，Sun Jieping, Zhu Hong<br>Description<br>This course thoroughly covers key data structures at the undergraduate<br>level. With a focus on how to assess costs and benefits, it teaches students<br>how to create efficient data structures and algorithms and how to adopt<br>to new design challenges. Students are taught how to assess applications<br>needs to find data structures with matching capabilities.</p>
 <p>Prerequisites C Language Programming<br>Discrete Mathematics</p>
@@ -363,9 +363,9 @@
       <category term="学" scheme="https://feahter.github.io/categories/%E5%AD%A6/"/>
     
     
-      <category term="考研" scheme="https://feahter.github.io/tags/%E8%80%83%E7%A0%94/"/>
-    
       <category term="数据结构" scheme="https://feahter.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="考研" scheme="https://feahter.github.io/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
@@ -374,7 +374,7 @@
     <link href="https://feahter.github.io/2017/05/12/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%87%8D%E7%82%B9/"/>
     <id>https://feahter.github.io/2017/05/12/研究生数据结构重点/</id>
     <published>2017-05-12T06:33:53.000Z</published>
-    <updated>2017-05-12T07:21:02.439Z</updated>
+    <updated>2017-05-12T07:21:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>一、线性表</p>
 <p>链表插入、删除节点时的指针操作（选择题）；</p>
@@ -436,9 +436,9 @@
       <category term="学" scheme="https://feahter.github.io/categories/%E5%AD%A6/"/>
     
     
-      <category term="考研" scheme="https://feahter.github.io/tags/%E8%80%83%E7%A0%94/"/>
-    
       <category term="数据结构" scheme="https://feahter.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="考研" scheme="https://feahter.github.io/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
@@ -447,7 +447,7 @@
     <link href="https://feahter.github.io/2017/05/11/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8/"/>
     <id>https://feahter.github.io/2017/05/11/前端项目列表/</id>
     <published>2017-05-11T05:18:13.000Z</published>
-    <updated>2017-06-22T07:30:59.647Z</updated>
+    <updated>2017-06-22T07:31:00.000Z</updated>
     
     <content type="html"><![CDATA[<table>
 <thead>
@@ -573,7 +573,7 @@
     <link href="https://feahter.github.io/2017/02/18/%E5%85%B3%E4%BA%8Ewebpack/"/>
     <id>https://feahter.github.io/2017/02/18/关于webpack/</id>
     <published>2017-02-18T08:27:40.000Z</published>
-    <updated>2017-05-11T05:06:01.950Z</updated>
+    <updated>2017-05-11T05:06:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>一、webpack入门准备：</p>
 <p>本地装好<a href="https://nodejs.org/en/" target="_blank" rel="external">node</a>、<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a></p>
@@ -626,7 +626,7 @@
     <link href="https://feahter.github.io/2016/12/22/%E5%85%B3%E4%BA%8ETypeScript/"/>
     <id>https://feahter.github.io/2016/12/22/关于TypeScript/</id>
     <published>2016-12-22T01:53:16.000Z</published>
-    <updated>2016-12-22T06:08:55.494Z</updated>
+    <updated>2016-12-22T06:08:56.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.cnblogs.com/tansm/p/TypeScript_Handbook.html" target="_blank" rel="external">转载：《TypeScript 中文入门教程》</a></p>
 <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>事情是这样的，我想搜索 <code>TypeScript 中文教程</code>，结果在 <a href="https://www.baidu.com/" target="_blank" rel="external">https://www.baidu.com</a> ， <a href="https://cn.bing.com/" target="_blank" rel="external">https://cn.bing.com</a> ，上都找不到官方的翻译，也没有一个像样的翻译（搜索的时间是2015-12-02），可怜我们无法使用google，所以就想去自己翻译官方的 TypeScript-Handbook。</p>
@@ -685,7 +685,7 @@
     <link href="https://feahter.github.io/2016/12/08/%E5%85%B3%E4%BA%8Egulp/"/>
     <id>https://feahter.github.io/2016/12/08/关于gulp/</id>
     <published>2016-12-08T02:56:31.000Z</published>
-    <updated>2016-12-08T05:03:37.955Z</updated>
+    <updated>2016-12-08T05:03:38.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="awesome-gulp中文版"><a href="#awesome-gulp中文版" class="headerlink" title="awesome-gulp中文版"></a><a href="https://github.com/alferov/awesome-gulp" target="_blank" rel="external">awesome-gulp</a>中文版</h3><blockquote>
 <p><a href="https://github.com/gulpjs/gulp" target="_blank" rel="external">gulp</a>的资源，插件和使用实例清单， 致力于打造更好的前端工程构建流程。</p>
@@ -921,7 +921,7 @@
     <link href="https://feahter.github.io/2016/12/08/%E5%89%8D%E7%AB%AF%E5%A4%A7%E7%A5%9E/"/>
     <id>https://feahter.github.io/2016/12/08/前端大神/</id>
     <published>2016-12-08T01:20:03.000Z</published>
-    <updated>2016-12-08T02:30:59.726Z</updated>
+    <updated>2016-12-08T02:31:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前端大神"><a href="#前端大神" class="headerlink" title="前端大神"></a>前端大神</h1><p>达者为师，站在巨人的肩膀上眺望，才能看得更远。</p>
 <h2 id="1-1-国际"><a href="#1-1-国际" class="headerlink" title="1.1 国际"></a>1.1 国际</h2><ol>
@@ -1195,7 +1195,7 @@
     <link href="https://feahter.github.io/2016/11/30/thinkphp%E5%AE%9E%E8%B7%B5/"/>
     <id>https://feahter.github.io/2016/11/30/thinkphp实践/</id>
     <published>2016-11-30T01:25:24.000Z</published>
-    <updated>2016-12-08T03:20:12.789Z</updated>
+    <updated>2016-12-08T03:20:14.000Z</updated>
     
     <content type="html"><![CDATA[<!-- ![thinkphp](http://oe3di974t.bkt.clouddn.com/thinkphp.png) -->
 <div><img src="http://oe3di974t.bkt.clouddn.com/thinkphp.png" alt="thinkphp" class="myimg"></div>
@@ -1258,7 +1258,7 @@
     <link href="https://feahter.github.io/2016/11/28/%E5%9F%BA%E4%BA%8EBootstrap%E7%9A%84%E8%87%AA%E9%80%82%E5%BA%94%E5%AE%9E%E6%96%BD%E6%96%B9%E6%A1%88/"/>
     <id>https://feahter.github.io/2016/11/28/基于Bootstrap的自适应实施方案/</id>
     <published>2016-11-28T03:31:18.000Z</published>
-    <updated>2016-12-08T03:19:33.372Z</updated>
+    <updated>2016-12-08T03:19:34.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="名由"><a href="#名由" class="headerlink" title="名由"></a>名由</h4><p>bootstrap:意为引导，引导有杠杆的作用。在计算机用语中为引导程序的意思。</p>
 <p>很多人会对Bootstrap这个名字感到困惑。英语Bootstrap的意思是靴带，来自短语：“pull oneself up by one′s bootstrap”，18世纪德国文学家拉斯伯（Rudolf Erich Raspe）的小说《巴龙历险记（或译为终极天将）》（Adventures of Baron Munchausen) 记述道：“巴龙掉到湖里沉到湖底，在他绝望的时候，他用自己靴子上的带子把自己拉了上来。”现意指不借助别人的力量，凭自己的努力，终于获得成功。统计学里“bootstrap”法是指用原样本自身的数据抽样得出新的样本及统计量，根据其意现在普遍将其译为“自助法”。</p>
@@ -1383,7 +1383,7 @@
     <link href="https://feahter.github.io/2016/11/25/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>https://feahter.github.io/2016/11/25/设计模式/</id>
     <published>2016-11-25T03:28:30.000Z</published>
-    <updated>2016-12-08T03:19:39.233Z</updated>
+    <updated>2016-12-08T03:19:40.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h1><p>设计模式（Design pattern）代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。设计模式是软件开发人员在软件开发过程中面临的一般问题的解决方案。这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。</p>
 <p>设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。</p>
@@ -1462,7 +1462,7 @@
     <link href="https://feahter.github.io/2016/10/12/%E9%98%B4%E9%98%B3%E5%B8%88-%E5%BE%A1%E9%AD%82-%E5%A6%96%E6%80%AA%E5%88%86%E5%B8%83%E7%BB%9F%E8%AE%A1/"/>
     <id>https://feahter.github.io/2016/10/12/阴阳师-御魂-妖怪分布统计/</id>
     <published>2016-10-12T05:07:48.000Z</published>
-    <updated>2016-10-12T05:49:23.120Z</updated>
+    <updated>2016-10-12T05:49:24.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="阴阳师-御魂-妖怪分布统计"><a href="#阴阳师-御魂-妖怪分布统计" class="headerlink" title="阴阳师-御魂-妖怪分布统计"></a>阴阳师-御魂-妖怪分布统计</h1><h2 id="御魂副本第一层"><a href="#御魂副本第一层" class="headerlink" title="御魂副本第一层"></a>御魂副本第一层</h2><p>一回合：骨女x1、天邪鬼黄x1、天邪鬼青x1</p>
 <p>二回合：山童x1、涂壁x1、独眼小僧x1</p>
@@ -1514,7 +1514,7 @@
     <link href="https://feahter.github.io/2016/10/12/%E9%98%B4%E9%98%B3%E5%B8%88-%E6%8E%A2%E7%B4%A2-%E5%A6%96%E6%80%AA%E5%88%86%E5%B8%83%E7%BB%9F%E8%AE%A1/"/>
     <id>https://feahter.github.io/2016/10/12/阴阳师-探索-妖怪分布统计/</id>
     <published>2016-10-12T04:29:45.000Z</published>
-    <updated>2016-10-12T05:49:09.335Z</updated>
+    <updated>2016-10-12T05:49:10.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="阴阳师-探索-妖怪分布统计"><a href="#阴阳师-探索-妖怪分布统计" class="headerlink" title="阴阳师-探索-妖怪分布统计"></a>阴阳师-探索-妖怪分布统计</h1><h2 id="探索副本第一章"><a href="#探索副本第一章" class="headerlink" title="探索副本第一章"></a>探索副本第一章</h2><p>天邪鬼绿1——天邪鬼绿x1、提灯小僧x2</p>
 <p>天邪鬼绿2——天邪鬼绿x1、灯笼鬼x2</p>
@@ -1633,7 +1633,7 @@
     <link href="https://feahter.github.io/2016/09/13/ST3%E7%A7%81%E4%BA%BA%E5%AE%9A%E5%88%B6/"/>
     <id>https://feahter.github.io/2016/09/13/ST3私人定制/</id>
     <published>2016-09-13T09:27:29.000Z</published>
-    <updated>2016-10-12T05:39:30.725Z</updated>
+    <updated>2016-10-12T05:39:32.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>ST3的私人订制。</strong></p>
 <h2 id="一、官网下载安装"><a href="#一、官网下载安装" class="headerlink" title="一、官网下载安装"></a>一、官网下载安装</h2><p><strong>1.</strong><a href="http://www.sublimetext.com/3" target="_blank" rel="external"><strong>官网</strong></a><strong>下载。</strong></p>
@@ -1794,7 +1794,7 @@
     <link href="https://feahter.github.io/2016/09/13/jQuery%E6%93%8D%E4%BD%9Cdom%E5%85%83%E7%B4%A0/"/>
     <id>https://feahter.github.io/2016/09/13/jQuery操作dom元素/</id>
     <published>2016-09-13T08:43:07.000Z</published>
-    <updated>2016-12-08T03:19:51.395Z</updated>
+    <updated>2016-12-08T03:19:52.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp</a><br>| <a href="http://www.w3school.com.cn/jquery/attributes_addclass.asp" target="_blank" rel="external">addClass()</a> | 向匹配的元素添加指定的类名。              |<br>| —————————————- | ————————— |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_after.asp" target="_blank" rel="external">after()</a> | 在匹配的元素之后插入内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_append.asp" target="_blank" rel="external">append()</a> | 向匹配的元素内部追加内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_appendto.asp" target="_blank" rel="external">appendTo()</a> | 向匹配的元素内部追加内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_attr.asp" target="_blank" rel="external">attr()</a> | 设置或返回匹配元素的属性和值。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_before.asp" target="_blank" rel="external">before()</a> | 在每个匹配的元素之前插入内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_clone.asp" target="_blank" rel="external">clone()</a> | 创建匹配元素集合的副本。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_detach.asp" target="_blank" rel="external">detach()</a> | 从 DOM 中移除匹配元素集合。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_empty.asp" target="_blank" rel="external">empty()</a> | 删除匹配的元素集合中所有的子节点。           |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_hasclass.asp" target="_blank" rel="external">hasClass()</a> | 检查匹配的元素是否拥有指定的类。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_html.asp" target="_blank" rel="external">html()</a> | 设置或返回匹配的元素集合中的 HTML 内容。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_insertafter.asp" target="_blank" rel="external">insertAfter()</a> | 把匹配的元素插入到另一个指定的元素集合的后面。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_insertbefore.asp" target="_blank" rel="external">insertBefore()</a> | 把匹配的元素插入到另一个指定的元素集合的前面。     |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_prepend.asp" target="_blank" rel="external">prepend()</a> | 向每个匹配的元素内部前置内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_perpendto.asp" target="_blank" rel="external">prependTo()</a> | 向每个匹配的元素内部前置内容。             |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_remove.asp" target="_blank" rel="external">remove()</a> | 移除所有匹配的元素。                  |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_removeattr.asp" target="_blank" rel="external">removeAttr()</a> | 从所有匹配的元素中移除指定的属性。           |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_removeclass.asp" target="_blank" rel="external">removeClass()</a> | 从所有匹配的元素中删除全部或者指定的类。        |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_replaceall.asp" target="_blank" rel="external">replaceAll()</a> | 用匹配的元素替换所有匹配到的元素。           |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_replacewith.asp" target="_blank" rel="external">replaceWith()</a> | 用新内容替换匹配的元素。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_text.asp" target="_blank" rel="external">text()</a> | 设置或返回匹配元素的内容。               |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_toggleclass.asp" target="_blank" rel="external">toggleClass()</a> | 从匹配的元素中添加或删除一个类。            |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_unwrap.asp" target="_blank" rel="external">unwrap()</a> | 移除并替换指定元素的父元素。              |<br>| <a href="http://www.w3school.com.cn/jquery/attributes_val.asp" target="_blank" rel="external">val()</a> | 设置或返回匹配元素的值。                |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrap.asp" target="_blank" rel="external">wrap()</a> | 把匹配的元素用指定的内容或元素包裹起来。        |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrapall.asp" target="_blank" rel="external">wrapAll()</a> | 把所有匹配的元素用指定的内容或元素包裹起来。      |<br>| <a href="http://www.w3school.com.cn/jquery/manipulation_wrapinner.asp" target="_blank" rel="external">wrapinner()</a> | 将每一个匹配的元素的子内容用指定的内容或元素包裹起来。 |</p>
 <p>获取dom获取表单</p>
@@ -2196,7 +2196,7 @@
     <link href="https://feahter.github.io/2016/09/13/jQuery%20%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8/"/>
     <id>https://feahter.github.io/2016/09/13/jQuery 的选择器/</id>
     <published>2016-09-13T07:42:13.000Z</published>
-    <updated>2016-12-08T03:19:59.206Z</updated>
+    <updated>2016-12-08T03:20:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>jQuery 的选择器可谓之强大无比，这里简单地总结一下常用的元素查找方法 </p>
 <p>$(“#myELement”)    选择id值等于myElement的元素，id值不能重复在文档中只能有一个id值是myElement所以得到的是唯一的元素<br>$(“div”)           选择所有的div标签元素，返回div元素数组<br>$(“.myClass”)      选择使用myClass类的css的所有元素<br>$(“<em>“)             选择文档中的所有的元素，可以运用多种的选择方式进行联合选择：例如$(“#myELement,div,.myclass”)<br>层叠选择器：<br>$(“form input”)         选择所有的form元素中的input元素<br>$(“#main &gt; </em>“)          选择id值为main的所有的子元素<br>$(“label + input”)     选择所有的label元素的下一个input元素节点，经测试选择器返回的是label标签后面直接跟一个input标签的所有input标签元素<br>$(“#prev ~ div”)       同胞选择器，该选择器返回的为id为prev的标签元素的所有的属于同一个父元素的div标签 </p>
